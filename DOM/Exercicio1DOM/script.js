@@ -1,10 +1,31 @@
-function botaoDOM() {
-  document.getElementById("titulo1").innerText = "Outro Titulo";
-}
+// Parte 1 - Exibir no console
 
-let titulo = document.getElementById("titulo1");
-console.log(titulo1);
+let titulo = document.getElementById("titulo");
+let paragrafo = document.querySelector(".paragrafo");
 
-let descricao = document.getElementsByClassName("parágrafo"); //vetor -> array
+console.log(titulo);
 console.log(paragrafo);
 
+
+// Parte 2 
+
+function mudarTexto() {
+  titulo.innerText = "Novo Título";
+  paragrafo.innerText = "Novo Parágrafo";
+}
+
+
+// Parte 3
+
+function mudarFundo() {
+  let body = document.querySelector("body");
+  body.style.backgroundColor = "purple"
+}
+
+
+// Parte 4
+
+function adicionarClasse() {
+  titulo.classList.add("descricao");
+  document.querySelector(".descricao").style.color = "yellow"
+}
