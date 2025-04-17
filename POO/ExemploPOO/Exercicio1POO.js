@@ -1,3 +1,4 @@
+// Classe Produto
 class Produto {
   constructor(nome, preco, estoque) {
     this.nome = nome;
@@ -5,6 +6,8 @@ class Produto {
     this.estoque = estoque;
   }
 
+  
+  // Metodos (vender, repor e exibirInfo)
   vender(quantidade) {
     if (quantidade > this.estoque) {
       console.log(
@@ -24,7 +27,7 @@ class Produto {
     this.estoque += quantidade;
     console.log(`Estoque atual: ${this.estoque}`);
   }
-  
+
   exibirInfo() {
     console.log(
       `Produto: ${this.nome}. Preço R$${this.preco}. Estoque: ${this.estoque}`
@@ -33,6 +36,7 @@ class Produto {
 }
 
 
+// Exibir na tela
 let produto = new Produto("Shampoo", 30.05, 1000);
 let produto1 = new Produto();
 
