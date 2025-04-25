@@ -1,0 +1,18 @@
+nav {
+  background-color: #c9a0ff;
+  padding: 10px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+}
+
+nav a {
+  color: #5f3a8f;
+  margin: 0 10px;
+  text-decoration: nome;
+  font-weight: bold;
+  font-size: 5vh;
+  font-family: 'Times New Roman', Times, serif;
+}

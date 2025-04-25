@@ -1,0 +1,34 @@
+form {
+  background-color: #e3c5ff;
+  padding: 40px;
+}
+
+hr {
+  color: #6f20b9;
+  border: #6f20b9 solid 1px;
+}
+
+label {
+  color: #6f20b9;
+  font-size: 19px;
+}
+
+.view {
+  background-color: #e3c5ff;
+  padding: 40px;
+}
+
+h2 {
+  color: #6f20b9;
+  font-size: 30px;
+}
+
+p {
+  color: #6f20b9;
+  font-size: 19px;
+}
+
+input {
+  background-color: #c88dff;
+  border-radius: 10px;
+}
