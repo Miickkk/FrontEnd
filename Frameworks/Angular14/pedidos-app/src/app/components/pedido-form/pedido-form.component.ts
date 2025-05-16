@@ -22,7 +22,7 @@ export class PedidoFormComponent {
     this.produtos = this.dadosService.getProdutos();
   }
 
-  selecinarProduto(id: string) {
+  selecionarProduto(id: string) {
     const index = this.produtoSelecionadoId.indexOf(id);
     if (index >= 0) {
       this.produtoSelecionadoId.splice(index, 1);

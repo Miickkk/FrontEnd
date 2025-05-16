@@ -1,13 +1,11 @@
 <h2>Registrar Pedido</h2>
 
-
 <!-- listar clientes  -->
 <label for="">Cliente</label>
 <select [(ngModel)]="clienteSelecionadoId">
     <option value="">Selecione Um Cliente</option>
     <option *ngFor = "let cliente of clientes" [value]="cliente.id">{{cliente.nome}}</option>
 </select>
-
 
 <!-- adicionar produtos  -->
 <h3>Produtos</h3>
@@ -18,9 +16,8 @@
     </label>
 </div>
 
-
 <!-- adicionar o desconto -->
  <label for="">Desconto (%)</label>
  <input type="number" [(ngModel)]="desconto">
 
-<button (click)="salvarPedido">Registrar Pedido</button>
+<button (click)="salvarPedido()">Registrar Pedido</button>

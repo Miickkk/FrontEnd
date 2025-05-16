@@ -5,19 +5,21 @@ import { DadosService } from 'src/app/services/dados.service';
 @Component({
   selector: 'app-produto-form',
   templateUrl: './produto-form.component.html',
-  styleUrls: ['./produto-form.component.css']
+  styleUrls: ['./produto-form.component.scss']
 })
 export class ProdutoFormComponent {
-  
-  nome :string = '';
+
+  //atributos
+  nome :string = "";
   preco :number = 0;
 
-  constructor(private dadoService: DadosService) {}
+  constructor(private dadosService: DadosService){}
 
-  adicionarProduto() {
-    const produto = new Produto(this.dadoService.getProdutos().length+1, this.nome, this.preco);
-    this.dadoService.adicionarProduto(produto);
-    this.nome = '';
-    this.preco = 0;
+  adicionarProduto(){
+    const produto = new Produto(this.dadosService.getProdutos().length+1, this.nome, this.preco);
+    this.dadosService.adicionarProduto(produto);
+    this.nome="";
+    this.preco=0;
   }
+
 }
