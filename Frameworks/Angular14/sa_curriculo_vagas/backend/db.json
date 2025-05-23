@@ -1,0 +1,62 @@
+{
+  "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolver FrontEnd Jr",
+      "foto": "img.webp",
+      "descricao": "Trabalhar com HTML, CSS e JS",
+      "salario": 4000
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "img2.webp",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 7000
+    },
+    {
+      "id": "3",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "img3.webp",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 10000
+    },
+    {
+      "id": "4",
+      "nome": "Gerente de Nuvem",
+      "foto": "img4.webp",
+      "descricao": "Vaga de Gerente de Nuvem",
+      "salario": 8500
+    }
+  ]
+
+ "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolver FrontEnd Jr",
+      "foto": "img.webp",
+      "descricao": "Trabalhar com HTML, CSS e JS",
+      "salario": 4000
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "img2.webp",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 7000
+    },
+    {
+      "id": "3",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "img3.webp",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 10000
+    },
+    {
+      "id": "4",
+      "nome": "Gerente de Nuvem",
+      "foto": "img4.webp",
+      "descricao": "Vaga de Gerente de Nuvem",
+      "salario": 8500
+    }
+}

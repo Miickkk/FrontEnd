@@ -1,1 +1,13 @@
-<p>curriculos works!</p>
+<section class="lista-curriculos">
+  <div *ngFor="let curriculo of curriculos">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Código da Vaga: {{ vaga.id }}</h5>
+        <h5 class="card-title">Vaga: {{ vaga.nome }}</h5>
+        <p class="card-text">Descricão da Vaga: {{ vaga.descricao }}</p>
+        <p class="card-text">Salário: R$ {{ vaga.salario }},00</p>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"></div>
+</section>
