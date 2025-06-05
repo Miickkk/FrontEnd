@@ -2,12 +2,58 @@
   <div *ngFor="let curriculo of curriculos">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Código da Vaga: {{ vaga.id }}</h5>
-        <h5 class="card-title">Vaga: {{ vaga.nome }}</h5>
-        <p class="card-text">Descricão da Vaga: {{ vaga.descricao }}</p>
-        <p class="card-text">Salário: R$ {{ vaga.salario }},00</p>
+        <h5 class="card-title">Id do curriculo: {{ curriculo.id }}</h5>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">Nome: </h5>
+        <br>
+        <h6>{{ curriculo.nome }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Email: </h5>
+        <br>
+        <h6>{{ curriculo.email }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Telefone: </h5>
+        <br>
+        <h6>{{ curriculo.telefone }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Experiencia: </h5>
+        <br>
+        <h6>{{ curriculo.experiencia }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Formação: </h5>
+        <br>
+        <h6>{{ curriculo.formacao }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Idade: </h5>
+        <br>
+        <h6>{{ curriculo.idade }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Gênero: </h5>
+        <br>
+        <h6>{{ curriculo.genero }}</h6>
+      </div>
+
+       <div class="card-body">
+        <h5 class="card-title">Endereço: </h5>
+        <br>
+        <h6>{{ curriculo.endereco }}</h6>
       </div>
     </div>
+    <br>
   </div>
   <div class="rodape"></div>
 </section>

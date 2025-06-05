@@ -1,0 +1,59 @@
+.lista-curriculos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 1rem;
+  max-width: 1800px;
+  margin: 0 auto;
+
+  .card {
+    margin: 10px 10px;
+    background-color: #f6e7ff;
+    border: 1px solid #c084e7;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    width: 60rem;
+
+    h6 {
+      color: #5f3f75;
+      margin-bottom: 0.5rem;
+      background-color: #fff;
+      border: 1px solid #c084e7;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      padding: 1rem;
+
+      h5.card-title {
+        color: #9368af;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+
+      p.card-text {
+        color: #555;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+
+      p.card-text:last-child {
+        margin-bottom: 0; 
+      }
+    }
+  }
+}
+
+.rodape {
+  height: 10vh;
+}

@@ -1,0 +1,150 @@
+$cor-primaria: #007bff;
+$cor-secundaria: #9368af;
+$cor-sucesso: #28a745;
+$cor-perigo: #dc3545;
+
+h2 {
+  padding: 20px;
+  text-align: center;
+  color: #9368af;
+}
+
+form {
+  background-color: #f6e7ff;
+  border: 1px solid #c084e7;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #9368af;
+    font-size: 1rem;
+  }
+
+  input {
+    width: calc(100% - 20px);
+    padding: 1rem 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #c084e7;
+    max-width: 600px;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: $cor-primaria;
+      box-shadow: 0, 0, 0, rgba($color: $cor-primaria, $alpha: 0.25);
+    }
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 0.75rem;
+
+    &[type="button"]:nth-of-type(1) {
+      background-color: $cor-secundaria;
+
+      &:hover {
+        background-color: darken($color: $cor-sucesso, $amount: 10%);
+      }
+    }
+
+    &[type="button"]:nth-of-type(2) {
+      background-color: $cor-secundaria;
+
+      &:hover {
+        background-color: darken($color: #ffff00, $amount: 10%);
+      }
+    }
+
+    &[type="button"]:nth-of-type(3) {
+      background-color: $cor-secundaria;
+
+      &:hover {
+        background-color: darken($color: $cor-perigo, $amount: 10%);
+      }
+    }
+  }
+}
+
+
+.lista-curriculos {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #f6e7ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  td,
+  th {
+    padding: 22px 20px;
+    text-align: left;
+    border-bottom: 1px solid #9368af;
+    vertical-align: middle;
+  }
+
+  thead {
+    background-color: #999;
+
+    th {
+      color: #9368af;
+      font-weight: bold;
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: lighten($color: #999, $amount: 5%);
+      }
+    }
+  }
+}
+
+.rodape {
+  height: 10vh;
+}
+
+.btn-listar {
+  color: #ffffff;
+  border: none;
+  background-color: $cor-secundaria;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($color: #ffff00, $amount: 10%);
+  }
+}
+
+.btn-excluir {
+  color: #ffffff;
+  border: none;
+  background-color: $cor-secundaria;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($color: $cor-perigo, $amount: 10%);
+  }
+}

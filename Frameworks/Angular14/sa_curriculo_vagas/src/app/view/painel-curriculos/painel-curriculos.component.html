@@ -1,1 +1,95 @@
-<p>painel-curriculos works!</p>
+<br>
+<h2>Cadastrar Currículo</h2>
+<br>
+
+<form #form="ngForm">
+    <label>ID</label>
+    <input type="text" name="id" [(ngModel)]="curriculo.id" required /><br />
+
+    <label>Nome</label>
+    <input type="text" name="nome" [(ngModel)]="curriculo.nome" required minlength="3" /><br />
+
+    <label>Email</label>
+    <input type="email" name="email" [(ngModel)]="curriculo.email" required /><br />
+
+    <label>Telefone</label>
+    <input type="text" name="telefone" [(ngModel)]="curriculo.telefone" required minlength="8" /><br />
+
+    <label>Experiência</label>
+    <input type="text" name="experiencia" [(ngModel)]="curriculo.experiencia" required /><br />
+
+    <label>Formação</label>
+    <input type="text" name="formacao" [(ngModel)]="curriculo.formacao" required /><br />
+
+    <label>Idade</label>
+    <input type="number" name="idade" [(ngModel)]="curriculo.idade" required min="16" /><br />
+
+    <label>Gênero</label>
+    <select name="genero" [(ngModel)]="curriculo.genero" required>
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+    </select><br /><br />
+
+    <label>Endereço</label>
+    <input type="text" name="endereco" [(ngModel)]="curriculo.endereco" required /><br />
+
+    <button type="button" [disabled]="!form.valid" (click)="cadastrar()">Cadastrar Curriculo</button>
+    <br><br>
+
+    <button type="button" (click)="atualizar(curriculo.id)">Atualizar Curriculo</button>
+    <br><br>
+
+    <button type="button" (click)="excluir(curriculo.id)">Excluir Curriculo</button>
+</form>
+
+<br>
+
+<section class="lista-curriculos">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Experiência</th>
+                <th>Formação</th>
+                <th>Idade</th>
+                <th>Gênero</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curriculo of curriculos" class="vaga-row">
+                <td>{{ curriculo.id }}</td>
+                <td>{{ curriculo.nome }}</td>
+                <td>{{ curriculo.email }}</td>
+                <td>{{ curriculo.telefone }}</td>
+                <td>{{ curriculo.experiencia }}</td>
+                <td>{{ curriculo.formacao }}</td>
+                <td>{{ curriculo.idade }}</td>
+                <td>{{ curriculo.genero }}</td>
+                <td>{{ curriculo.endereco }}</td>
+                <td>
+                    <button type="button" (click)="listarCurriculoUnico(curriculo)" class="btn-listar">
+                        Listar
+                    </button>
+
+                    <br>
+                    <br>
+
+                    <button type="button" (click)="excluir(curriculo.id)" class="btn-excluir">
+                        Excluir
+                      </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<br>
+<div class="rodape">
+
+</div>

@@ -12,7 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { PainelVagasComponent } from './view/painel-vagas/painel-vagas.component';
 import { FormsModule } from '@angular/forms';
-import { PainelCurriculosComponent } from './view/painel-curriculos/painel-curriculos.component';
+import { PainelCurriculoComponent } from './view/painel-curriculos/painel-curriculos.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { PainelCurriculosComponent } from './view/painel-curriculos/painel-curri
     HeaderComponent,
     FooterComponent,
     PainelVagasComponent,
-    PainelCurriculosComponent
+    PainelCurriculoComponent
   ],
   imports: [
     BrowserModule,

@@ -23,40 +23,103 @@
     },
     {
       "id": "4",
-      "nome": "Gerente de Nuvem",
+      "nome": "Suporte Técnico",
       "foto": "img4.webp",
-      "descricao": "Vaga de Gerente de Nuvem",
-      "salario": 8500
+      "descricao": "Atendimento a clientes e resolução de problemas técnicos.",
+      "salario": "2800"
+    },
+    {
+      "id": "5",
+      "nome": "Engenheiro de Software",
+      "foto": "img5.jpg",
+      "descricao": "Projetar e desenvolver soluções escaláveis e de alto desempenho.",
+      "salario": "7000"
+    },
+    {
+      "id": "6",
+      "nome": "Gerente de Projetos",
+      "foto": "img6.webp",
+      "descricao": "Gestão de cronogramas, equipes e entregas de projetos de TI.",
+      "salario": "8500"
     }
-  ]
-
- "vagas": [
+  ],
+  "curriculos": [
     {
       "id": "1",
-      "nome": "Desenvolver FrontEnd Jr",
-      "foto": "img.webp",
-      "descricao": "Trabalhar com HTML, CSS e JS",
-      "salario": 4000
+      "nome": "James Carter",
+      "email": "james.carter@email.com",
+      "telefone": "11991234567",
+      "experiencia": "2 anos como Desenvolvedor Front-End",
+      "formacao": "Curso Técnico em Desenvolvimento Web",
+      "idade": "24",
+      "genero": "Masculino",
+      "endereco": "Rua das Laranjeiras, 123 - São Paulo, SP"
     },
     {
       "id": "2",
-      "nome": "Desenvolver BackEnd Pleno",
-      "foto": "img2.webp",
-      "descricao": "Trabalhar com Desenvolvimento Web",
-      "salario": 7000
+      "nome": "Emily Johnson",
+      "email": "emily.johnson@email.com",
+      "telefone": "11992345678",
+      "experiencia": "4 anos como Desenvolvedora Back-End",
+      "formacao": "Bacharelado em Ciência da Computação",
+      "idade": "28",
+      "genero": "Feminino",
+      "endereco": "Avenida Paulista, 456 - São Paulo, SP"
     },
     {
       "id": "3",
-      "nome": "Desenvolver Fullstack Senior",
-      "foto": "img3.webp",
-      "descricao": "Trabalhar com Desenvolvimento Web",
-      "salario": 10000
+      "nome": "Michael Thompson",
+      "email": "michael.thompson@email.com",
+      "telefone": "11993456789",
+      "experiencia": "6 anos como Desenvolvedor Fullstack",
+      "formacao": "Engenharia de Software",
+      "idade": "31",
+      "genero": "Masculino",
+      "endereco": "Rua do Comércio, 789 - Belo Horizonte, MG"
     },
     {
       "id": "4",
-      "nome": "Gerente de Nuvem",
-      "foto": "img4.webp",
-      "descricao": "Vaga de Gerente de Nuvem",
-      "salario": 8500
+      "nome": "Fernanda Oliveira",
+      "email": "fernanda.oliveira@example.com",
+      "telefone": "31995554433",
+      "experiencia": "4 anos como Designer Gráfico",
+      "formacao": "Design Gráfico - UFMG",
+      "idade": "29",
+      "genero": "feminino",
+      "endereco": "Av. Amazonas, 789 - Belo Horizonte, MG"
+    },
+    {
+      "id": "5",
+      "nome": "Lucas Lima",
+      "email": "lucas.lima@example.com",
+      "telefone": "41999887755",
+      "experiencia": "6 anos como Gerente de Projetos",
+      "formacao": "Administração - UFPR",
+      "idade": "35",
+      "genero": "masculino",
+      "endereco": "Rua das Araucárias, 987 - Curitiba, PR"
+    },
+    {
+      "id": "6",
+      "nome": "Juliana Costa",
+      "email": "juliana.costa@example.com",
+      "telefone": "11997766554",
+      "experiencia": "1 ano como Estagiária em Desenvolvimento Web",
+      "formacao": "Análise e Desenvolvimento de Sistemas - FIAP",
+      "idade": "21",
+      "genero": "feminino",
+      "endereco": "Rua Bento Branco, 321 - São Paulo, SP"
+    },
+    {
+      "id": "7",
+      "nome": "Rafael Torres",
+      "email": "rafael.torres@email.com",
+      "telefone": "61944443333",
+      "experiencia": "6 anos como Gerente de Projetos",
+      "formacao": "Pós-graduação em Gestão de TI",
+      "idade": 35,
+      "genero": "masculino",
+      "endereco": "Quadra 10, Lote 5 - Brasília"
     }
+  ]
 }

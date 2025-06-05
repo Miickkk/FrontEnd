@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PainelCurriculosComponent } from './painel-curriculos.component';
+import { PainelCurriculoComponent } from './painel-curriculos.component';
 
 describe('PainelCurriculosComponent', () => {
-  let component: PainelCurriculosComponent;
-  let fixture: ComponentFixture<PainelCurriculosComponent>;
+  let component: PainelCurriculoComponent;
+  let fixture: ComponentFixture<PainelCurriculoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PainelCurriculosComponent]
+      declarations: [PainelCurriculoComponent],
     });
-    fixture = TestBed.createComponent(PainelCurriculosComponent);
+    fixture = TestBed.createComponent(PainelCurriculoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
