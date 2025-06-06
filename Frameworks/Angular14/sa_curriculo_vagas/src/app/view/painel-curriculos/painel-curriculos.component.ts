@@ -1,3 +1,4 @@
+//IMPORTAÇÕES NECESSÁRIAS
 import { Component, OnInit } from '@angular/core';
 import { Curriculo } from 'src/app/models/curriculo.model';
 import { CurriculoService } from 'src/app/service/curriculo.service';
@@ -7,6 +8,9 @@ import { CurriculoService } from 'src/app/service/curriculo.service';
   templateUrl: './painel-curriculos.component.html',
   styleUrls: ['./painel-curriculos.component.scss'],
 })
+
+
+//COMPONENTE DO PAINEL DE CURRÍCULOS
 export class PainelCurriculoComponent implements OnInit {
   public curriculo: Curriculo = new Curriculo(0, '', '', '', '', '', 0, '', '');
 
@@ -18,6 +22,8 @@ export class PainelCurriculoComponent implements OnInit {
     this.listarCurriculos();
   }
 
+
+  //METODO PARA LISTAR OS CURRÍCULOS
   listarCurriculos() {
     this._curriculosService.getCurriculos().subscribe((retornaCurriculo) => {
       this.curriculos = retornaCurriculo.map((item) => {
@@ -36,10 +42,14 @@ export class PainelCurriculoComponent implements OnInit {
     });
   }
 
+
+  //RECEBE O CURRÍCULO SELECIONADO PARA LISTAR
   listarCurriculoUnico(curriculo: Curriculo) {
     this.curriculo = curriculo;
   }
 
+
+  //METODO PARA CADASTRAR CURRICULO
   cadastrar() {
     this._curriculosService.cadastrarCurriculo(this.curriculo).subscribe(
       () => {
@@ -52,6 +62,8 @@ export class PainelCurriculoComponent implements OnInit {
     );
   }
 
+
+  //METODO PARA ATUALIZAR O CURRÍCULO
   atualizar(id: number) {
     this._curriculosService.atualizarCurriculo(id, this.curriculo).subscribe(
       () => {
@@ -65,6 +77,8 @@ export class PainelCurriculoComponent implements OnInit {
     );
   }
 
+
+  //METODO PARA EXCLUIR O CURRÍCULO
   excluir(id: number) {
     this._curriculosService.removerCurriculo(id).subscribe(
       () => {

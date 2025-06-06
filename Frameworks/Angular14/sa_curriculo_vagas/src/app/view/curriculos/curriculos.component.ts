@@ -1,6 +1,8 @@
+//IMPOTAÇÕES NECESSÁRIAS
 import { Component, OnInit } from '@angular/core';
 import { Curriculo } from 'src/app/models/curriculo.model';
 import { CurriculoService } from '../../service/curriculo.service';
+
 
 @Component({
   selector: 'app-curriculos',
@@ -16,6 +18,8 @@ export class CurriculosComponent implements OnInit {
     this.listarCurriculos();
   }
 
+
+  //METODO PARA LISTAR OS CURRÍCULOS
   listarCurriculos() {
     this._curriculosSerice
       .getCurriculos()

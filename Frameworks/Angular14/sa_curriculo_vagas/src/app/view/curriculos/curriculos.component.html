@@ -1,52 +1,71 @@
+<!--SEÇÃO DE LISTA CURRICULOS-->
 <section class="lista-curriculos">
   <div *ngFor="let curriculo of curriculos">
     <div class="card">
+
+      <!--ID-->
       <div class="card-body">
         <h5 class="card-title">Id do curriculo: {{ curriculo.id }}</h5>
       </div>
 
+
+      <!--NOME-->
       <div class="card-body">
         <h5 class="card-title">Nome: </h5>
         <br>
         <h6>{{ curriculo.nome }}</h6>
       </div>
 
+
+      <!--EMAIL-->
        <div class="card-body">
         <h5 class="card-title">Email: </h5>
         <br>
         <h6>{{ curriculo.email }}</h6>
       </div>
 
+
+      <!--TELEFONE-->
        <div class="card-body">
         <h5 class="card-title">Telefone: </h5>
         <br>
         <h6>{{ curriculo.telefone }}</h6>
       </div>
 
+
+      <!--EXPERIENCIA-->
        <div class="card-body">
         <h5 class="card-title">Experiencia: </h5>
         <br>
         <h6>{{ curriculo.experiencia }}</h6>
       </div>
 
+
+      <!--FORMAÇÃO-->
        <div class="card-body">
         <h5 class="card-title">Formação: </h5>
         <br>
         <h6>{{ curriculo.formacao }}</h6>
       </div>
 
+
+      <!--IDADE-->
        <div class="card-body">
         <h5 class="card-title">Idade: </h5>
         <br>
         <h6>{{ curriculo.idade }}</h6>
       </div>
 
+
+      <!--GENERO-->
        <div class="card-body">
         <h5 class="card-title">Gênero: </h5>
         <br>
         <h6>{{ curriculo.genero }}</h6>
       </div>
 
+
+      <!--ENDERECO-->
        <div class="card-body">
         <h5 class="card-title">Endereço: </h5>
         <br>
@@ -55,5 +74,7 @@
     </div>
     <br>
   </div>
+
+  <!--RODAPE-->
   <div class="rodape"></div>
 </section>

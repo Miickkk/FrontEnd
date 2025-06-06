@@ -1,14 +1,19 @@
+//IMPORTAÇÕES NECESSÁRIAS
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Curriculo } from '../models/curriculo.model';
 
+
+//TESTE DO SERVIÇO CURRICULO
 @Injectable({
   providedIn: 'root',
 })
 export class CurriculoService {
   private apiUrl = 'http://localhost:3001/curriculos';
 
+
+  //CONFIGURAÇÃO DO SERVIÇO CURRICULO
   constructor(private http: HttpClient) {}
 
   getCurriculos(): Observable<Curriculo[]> {

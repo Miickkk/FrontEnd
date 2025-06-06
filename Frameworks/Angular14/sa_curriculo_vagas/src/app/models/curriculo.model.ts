@@ -1,3 +1,4 @@
+//CLASSE E CONSTRUTOR CURRICULO
 export class Curriculo {
   constructor(
     public id: number,
@@ -11,6 +12,8 @@ export class Curriculo {
     public endereco?: string
   ) {}
 
+
+  //TRANSFORMA O OBJETO CURRICULO EM UM MAP
   toMap(): { [key: string]: any } {
     return {
       id: this.id,
@@ -25,17 +28,19 @@ export class Curriculo {
     };
   }
 
+
+  //TRANSFORMA O MAP EM UM OBJETO CURRICULO
   static fromMap(map: any): Curriculo {
     return new Curriculo(
-      map.id,
-      map.nome,
-      map.email,
-      map.telefone,
-      map.experiencia,
-      map.formacao,
-      map.idade,
-      map.genero,
-      map.endereco
+      map.id,                      // ID
+      map.nome,                    // NOME
+      map.email,                   // EMAIL
+      map.telefone,                // TELEFONE
+      map.experiencia,             // EXPERIENCIA
+      map.formacao,                // FORMACAO
+      map.idade,                   // IDADE
+      map.genero,                  // GENERO
+      map.endereco                 // ENDERECO
     );
   }
 }
