@@ -1,0 +1,18 @@
+/* estilizacao da aplicacao principal */
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #e3c5ff;
+  margin: 0;
+  padding: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #8400ff;
+}
+
+div {
+  text-align: center;
+  margin-top: 20px;
+}

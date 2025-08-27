@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    { "id": 1, "nome": "Carlos Corretor", "email": "corretor@prime.com", "senha": "123", "tipo": "corretor" },
+    { "id": 2, "nome": "Ana Cliente", "email": "cliente@email.com", "senha": "123", "tipo": "cliente" }
+  ],
+  "imoveis": [
+    {
+      "id": 1,
+      "titulo": "Apartamento com vista para o mar",
+      "corretorId": 1,
+      "tipo": "Apartamento",
+      "cidade": "Santos",
+      "preco": 750000,
+      "descricao": "Lindo apartamento com 3 quartos...",
+      "imagemUrl": "url_da_imagem.jpg"
+    }
+  ],
+  "interesses": [
+    { "id": 1, "clienteId": 2, "imovelId": 1 }
+  ]
+}

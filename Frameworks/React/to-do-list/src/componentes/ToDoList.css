@@ -1,0 +1,30 @@
+/* Estilizaçao da lista de tarefas */
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: auto;
+}
+
+li {
+    background-color: #8400ff;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefa {
+    color: #ffffff;
+}
+
+button {
+    background-color: #8400ff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
