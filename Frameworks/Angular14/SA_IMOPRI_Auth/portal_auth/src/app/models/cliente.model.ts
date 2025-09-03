@@ -1,10 +1,9 @@
-export class Corretor {
+export class Cliente {
   constructor(
     public id: number,
     public nome: string,
     public email: string,
-    public senha: string,
-    public permissao: string // ex: 'admin'
+    public senha: string
   ) {}
 
   // OBJ to JSON
@@ -13,19 +12,17 @@ export class Corretor {
       id: this.id,
       nome: this.nome,
       email: this.email,
-      senha: this.senha,
-      permissao: this.permissao
+      senha: this.senha
     };
   }
 
   // JSON to OBJ
-  static fromMap(map: any): Corretor {
-    return new Corretor(
+  static fromMap(map: any): Cliente {
+    return new Cliente(
       map.id,
       map.nome,
       map.email,
-      map.senha,
-      map.permissao
+      map.senha
     );
   }
 }
