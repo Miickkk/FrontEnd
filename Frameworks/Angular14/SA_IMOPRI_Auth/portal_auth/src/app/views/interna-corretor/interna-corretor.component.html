@@ -1,0 +1,50 @@
+<div class="corretor-container">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a routerLink="/" class="logo">Prime Imobiliária</a>
+    <div class="navItens">
+      <a (click)="setAba('imoveis')" class="navLink" [class.active]="abaAtiva === 'imoveis'">Meus Imóveis</a>
+      <a (click)="setAba('cadastrar')" class="navLink" [class.active]="abaAtiva === 'cadastrar'">Cadastrar Imóvel</a>
+      <a (click)="setAba('interessados')" class="navLink" [class.active]="abaAtiva === 'interessados'">Interessados</a>
+      <a (click)="logout()" class="navLink">Sair</a>
+    </div>
+  </nav>
+
+  <!-- Meus Imóveis -->
+  <section *ngIf="abaAtiva === 'imoveis'" class="imoveis-section">
+    <h2>Meus Imóveis</h2>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Procurar imóvel" [(ngModel)]="filtro" />
+    </div>
+
+    <div class="imoveis-grid">
+      <div class="imovel-card" *ngFor="let imovel of imoveis | filtroImovel:filtro">
+        <h3>{{ imovel.nome }}</h3>
+        <p>{{ imovel.descricao }}</p>
+        <button (click)="verImovel(imovel)">Ver Imóvel</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cadastrar Imóvel -->
+  <section *ngIf="abaAtiva === 'cadastrar'" class="cadastrar-section">
+    <h2>Cadastrar Imóvel</h2>
+    <form (ngSubmit)="salvarImovel()">
+      <input type="text" [(ngModel)]="novoImovel.nome" name="nome" placeholder="Título do imóvel" required />
+      <textarea [(ngModel)]="novoImovel.descricao" name="descricao" placeholder="Descrição" required></textarea>
+      <input type="text" [(ngModel)]="novoImovel.foto" name="foto" placeholder="URL da imagem" />
+      <button type="submit">Salvar Imóvel</button>
+    </form>
+  </section>
+
+  <!-- Interessados -->
+  <section *ngIf="abaAtiva === 'interessados'" class="interessados-section">
+    <h2>Interessados</h2>
+    <div class="interessado-card" *ngFor="let i of interessados">
+      <h3>{{ i.nome }}</h3>
+      <p>Email: {{ i.email }}</p>
+      <p>Telefone: {{ i.telefone }}</p>
+    </div>
+  </section>
+</div>

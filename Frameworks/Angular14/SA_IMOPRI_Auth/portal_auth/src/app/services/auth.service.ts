@@ -7,7 +7,7 @@ import { map, Observable, switchMap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3001/clientes';
+  private apiUrl = 'http://localhost:3004/clientes';
   private readonly CHAVE_AUTH = 'clienteLogado';
 
   constructor(private router: Router, private http: HttpClient) {}
@@ -46,13 +46,13 @@ export class AuthService {
         }
 
         // Procurar usuário normal
-        const clientes = clientes.find(
-          (clientes) => clientes.email === credenciais.email && clientes.senha === credenciais.senha
+        const clienteEncontrado = corretores.find(
+          (cliente: any) => cliente.email === credenciais.email && cliente.senha === credenciais.senha
         );
 
-        if (clientes) {
-          localStorage.setItem(this.CHAVE_AUTH, JSON.stringify(clientes));
-          return clientes;
+        if (clienteEncontrado) {
+          localStorage.setItem(this.CHAVE_AUTH, JSON.stringify(clienteEncontrado));
+          return clienteEncontrado;
         }
 
         return null;

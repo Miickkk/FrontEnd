@@ -9,15 +9,15 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
-    const usuario = this.authService.usuarioAtual();
+    const cliente = this.authService.clienteAtual();
 
-    if (!usuario) {
+    if (!cliente) {
       this.router.navigate(['/login']);
       return false;
     }
 
-    // Apenas admin pode acessar /interna-admin
-    if (window.location.href.includes('interna-admin') && usuario.permissao !== 'admin') {
+
+    if (window.location.href.includes('interna-corretor') && cliente.permissao !== 'corretor') {
       this.router.navigate(['/home']);
       return false;
     }

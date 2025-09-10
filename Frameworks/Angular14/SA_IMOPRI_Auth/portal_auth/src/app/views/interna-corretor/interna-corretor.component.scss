@@ -1,0 +1,119 @@
+.corretor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f6f6;
+  border-bottom: 2px solid #1e8c73;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1e8c73;
+  text-decoration: none;
+}
+
+.navItens {
+  display: flex;
+  gap: 15px;
+}
+
+.navLink {
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e8c73;
+  border: 1px solid #1e8c73;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navLink.active, 
+.navLink:hover {
+  background: #1e8c73;
+  color: #fff;
+}
+
+h2 {
+  margin: 20px 0;
+  color: #1e8c73;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1e8c73;
+  border-radius: 20px;
+  outline: none;
+}
+
+.imoveis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.imovel-card {
+  border: 1px solid #1e8c73;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.imovel-card h3 {
+  color: #1e8c73;
+}
+
+.imovel-card button {
+  margin-top: 10px;
+  background-color: #1e8c73;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cadastrar-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cadastrar-section input,
+.cadastrar-section textarea {
+  padding: 10px;
+  border: 1px solid #1e8c73;
+  border-radius: 8px;
+}
+
+.cadastrar-section button {
+  align-self: flex-start;
+  background: #1e8c73;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.interessado-card {
+  border: 1px solid #1e8c73;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+}

@@ -4,7 +4,7 @@ export class Corretor {
     public nome: string,
     public email: string,
     public senha: string,
-    public permissao: string // ex: 'admin'
+    public permissao: string 
   ) {}
 
   // OBJ to JSON

@@ -1,0 +1,38 @@
+<div class="registro-page">
+  <div class="registro-box">
+    <!-- Título -->
+    <h2>Crie sua conta</h2>
+
+    <!-- Formulário -->
+    <form (ngSubmit)="registrar()" class="registro-form">
+      <input 
+        type="text" 
+        [(ngModel)]="nome" 
+        name="nome" 
+        placeholder="Nome completo" 
+        required>
+
+      <input 
+        type="email" 
+        [(ngModel)]="email" 
+        name="email" 
+        placeholder="Email" 
+        required>
+
+      <input 
+        type="password" 
+        [(ngModel)]="senha" 
+        name="senha" 
+        placeholder="Senha" 
+        required>
+
+      <button type="submit" class="btn-cadastrar">Cadastrar</button>
+    </form>
+
+    <!-- Link para login -->
+    <div class="login-link">
+      <p>Já tem conta?</p>
+      <a routerLink="/login" class="btn-login">Entrar</a>
+    </div>
+  </div>
+</div>

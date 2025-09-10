@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<div class="interna-container">
+  <header class="interna-header">
+    <h1>Bem-vindo, {{ usuario.nome }}!</h1>
+    <button class="logout-btn" (click)="logout()">Sair</button>
+  </header>
+
+  <main class="interna-content">
+    <section class="welcome-card">
+      <h2>Área do Cliente</h2>
+      <p>Gerencie seus interesses e explore os melhores imóveis.</p>
+    </section>
+
+    <section class="actions-grid">
+      <div class="action-card" routerLink="/imoveis">
+        <h3>Imóveis Disponíveis</h3>
+        <p>Explore todas as opções de compra e aluguel</p>
+        <button class="btn-ver">Ver Imóveis</button>
+      </div>
+
+      <div class="action-card" routerLink="/favoritos">
+        <h3>Favoritos</h3>
+        <p>Seus imóveis salvos em um só lugar</p>
+        <button class="btn-ver">Ver Favoritos</button>
+      </div>
+
+      <div class="action-card" routerLink="/notificacoes">
+        <h3>Notificações</h3>
+        <p>Acompanhe novidades e atualizações</p>
+        <button class="btn-ver">Ver Notificações</button>
+      </div>
+
+      <div class="action-card" routerLink="/dashboard">
+        <h3>Dashboard</h3>
+        <p>Estatísticas e histórico da sua conta</p>
+        <button class="btn-ver">Acessar Dashboard</button>
+      </div>
+    </section>
+
+    <section class="user-info">
+      <h3>Suas Informações</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Nome:</strong> {{ usuario.nome }}
+        </div>
+        <div class="info-item">
+          <strong>Email:</strong> {{ usuario.email }}
+        </div>
+        <div class="info-item">
+          <strong>ID:</strong> {{ usuario.id }}
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<app-footer></app-footer>
+<router-outlet></router-outlet>
