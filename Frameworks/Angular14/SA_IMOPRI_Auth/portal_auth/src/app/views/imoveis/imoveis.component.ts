@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Imovel } from 'src/app/models/imoveis.model';
-import { ImoveisService } from 'src/app/services/imoveis.service';
+import { Imovel } from '../../models/imoveis.model';
+import { ImovelService } from '../../services/imoveis.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-imoveis',
+  standalone: true,
   templateUrl: './imoveis.component.html',
+   imports: [CommonModule],
   styleUrls: ['./imoveis.component.scss']
 })
 export class ImovelComponent implements OnInit {
   public imoveis: Imovel[] = []; // vetor para armazenar os currículos do BD
 
-  constructor(private _imovelService: ImoveisService) {}
+  constructor(private _imovelService: ImovelService) {}
 
   ngOnInit(): void {
     this.listarImoveis();
@@ -18,10 +21,10 @@ export class ImovelComponent implements OnInit {
 
   listarImoveis() {
     this._imovelService.getImoveis().subscribe(
-      (e) => {
-        this.imoveis = e.map((imovel) => Imovel.fromMap(imovel));
+      (e: any[]) => {
+        this.imoveis = e.map((imovel: any) => Imovel.fromMap(imovel));
       },
-      (error) => {
+      (error: any) => {
         console.error('Erro ao buscar imóveis:', error);
       }
     );

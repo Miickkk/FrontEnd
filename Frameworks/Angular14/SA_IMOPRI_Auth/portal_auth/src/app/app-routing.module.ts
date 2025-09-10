@@ -5,9 +5,9 @@ import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { InternaComponent } from './views/interna/interna.component';
 import { InternaCorretorComponent } from './views/interna-corretor/interna-corretor.component';
-import { ImoveisComponent } from './views/imoveis/imoveis.component';
+import { ImovelComponent } from './views/imoveis/imoveis.component';
 import { InteressesComponent } from './views/interesses/interesses.component';
-import { AuthGuard } from './guardas/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
 
   // Usuários comuns
-  { path: 'imoveis', component: ImoveisComponent, canActivate: [AuthGuard] },
+  { path: 'imoveis', component: ImovelComponent, canActivate: [AuthGuard] },
   { path: 'interesses', component: InteressesComponent, canActivate: [AuthGuard] },
   { path: 'interna', component: InternaComponent, canActivate: [AuthGuard] },
 

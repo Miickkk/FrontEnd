@@ -1,5 +1,5 @@
 // arquivo responsável pela modelagem de dados para interessados
-export class Interessado {
+export class Interesses {
     constructor(
         public id?: number,
         public nome?: string,
@@ -22,8 +22,8 @@ export class Interessado {
     }
 
     // JSON => OBJ
-    static fromMap(map: any): Interessado {
-        return new Interessado(
+    static fromMap(map: any): Interesses {
+        return new Interesses(
             map.id,
             map.nome,
             map.email,
