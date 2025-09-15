@@ -82,7 +82,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 ## Diagrama de Fluxo – Login e Redirecionamento
--
+- <img src="https://www.mermaidchart.com/app/projects/16378ef4-3e26-4d93-b5e5-3f211c95eef0/diagrams/83ff787d-e5c6-45b9-9af8-12415fd9929e/version/v0.1/edit" width="100">
 
 
 ## Diagrama de Fluxo – Cliente
