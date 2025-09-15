@@ -1,5 +1,5 @@
 # SA_IMOPRI_Auth
-# Levantamento de requisitos 
+# LEVANTAMENTO DE REQUISITOS 
 
 
 ## Objetivos SMART
@@ -75,3 +75,27 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 | 14h   |     |     | Testes finais e correções |
 | 15h   |     |     | Preparação do vídeo de apresentação |
 | 16h   |     |     | Entrega final e publicação do repositório |
+
+
+
+## DIAGRAMA DE FLUXOS
+
+
+## Diagrama de Fluxo – Login e Redirecionamento
+-
+
+
+## Diagrama de Fluxo – Cliente
+-
+
+
+## Diagrama de Fluxo – Corretor
+-
+
+
+
+## DIAGRAMA DE CASOS DE USO
+-
+
+
+## DIAGRAMA DE CLASSES
