@@ -95,8 +95,8 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 ## DIAGRAMA DE CASOS DE USO
-<img src="diagrama de casos de uso.png" width="600">
+<img src="diagrama de casos de uso.png" width="400">
 
 
 ## DIAGRAMA DE CLASSES
-<img src="diagrama de classes.png" width="600">
+<img src="diagrama de classes.png" width="400">
