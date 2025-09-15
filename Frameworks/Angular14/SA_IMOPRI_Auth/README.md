@@ -82,7 +82,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 ## Diagrama de Fluxo – Login e Redirecionamento
--
+- <img src="diagrama de fluxos - login.png" width="100">
 
 
 ## Diagrama de Fluxo – Cliente
