@@ -90,7 +90,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 ## Diagrama de Fluxo – Corretor
-<img src="diagrama de fluxos - corretor.png" width="400">
+<img src="diagrama de fluxos - corretor.png" width="500">
 
 
 
