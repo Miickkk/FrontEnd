@@ -4,7 +4,7 @@
       <div class="property-main">
         <div class="card gallery-card">
           <div *ngIf="imovel" class="property-details">
-          <img src="assets\img\{{imovel.imagemUrl}}" alt="...">
+          <img *ngIf="imovel" [src]="'assets/img/' + imovel.imagemUrl" alt="Imagem do imóvel">
 
         <div class="card property-info-card">
           <div class="badges">
@@ -20,7 +20,7 @@
 
       <div class="property-sidebar">
         <div class="card sidebar-card">
-          <button id="btn-interest" class="btn btn-primary w-full" [routerLink]="['/meus-interesses']">Tenho interesse</button>
+          <button id="btn-interest" class="btn btn-primary w-full" (click)="registrarInteresse(imovel?.id)">Tenho interesse</button>
         </div>
       </div>
     </div>

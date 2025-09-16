@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  standalone: true,
   templateUrl: './footer.html',
-  styleUrls: ['./footer.scss'],
-  standalone: true
+  styleUrls: ['./footer.scss']
 })
-export class Footer {
-
-}
+export class Footer {}  // ⚠️ Export precisa bater com o import no App

@@ -1,26 +1,20 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { Home } from './views/publico/home/home';
+import { BuscaImoveis } from './views/publico/busca-imoveis/busca-imoveis';
 import { Login } from './auth/login/login';
 import { Registro } from './auth/registro/registro';
+import { MeusInteresses } from './views/cliente/meus-interesses/meus-interesses';
+import { DashboardImoveis } from './views/corretor/dashboard-imoveis/dashboard-imoveis';
 import { authGuard } from './core/guards/auth-guard';
 import { corretorGuard } from './core/guards/corretor-guard';
-import { Imoveis } from './views/cliente/imoveis/imoveis';
-import { NgModule } from '@angular/core';
-
+import { CardImovel } from './templates/components/card-imovel/card-imovel';
 
 export const routes: Routes = [
-    { path: '', component: Home },
-
-    { path: 'login', component: Login },
-    { path: 'registro', component: Registro },
-
-    // Usuários comuns
-    { path: 'imoveis', component: Imoveis, canActivate: [authGuard] },
-
+    {path: '', component: Home},
+    {path: 'busca', component: BuscaImoveis},
+    {path: 'login', component: Login},
+    {path: 'registro', component: Registro},
+    {path: 'meus-interesses', component: MeusInteresses},
+    {path: 'dashboard', component: DashboardImoveis},
+    {path: 'imovel/:id', component: CardImovel}
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

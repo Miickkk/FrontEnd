@@ -1,22 +1,38 @@
 <div class="login-page">
-  <div class="login-box">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="assets/logo.png" alt="Prime Imobiliária">
-      <h1>Prime <span>imobiliária</span></h1>
-    </div>
+  <div class="login-container">
 
-    <!-- Formulário de Login -->
-    <form (ngSubmit)="onSubmit()" class="login-form">
-      <input type="text" [(ngModel)]="email" name="email" placeholder="Email" required>
-      <input type="password" [(ngModel)]="senha" name="senha" placeholder="Senha" required>
-      <button type="submit" class="btn-login">Login</button>
-    </form>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Entrar na sua conta</h2>
+        <p class="card-subtitle">Acesse sua área exclusiva na Imobiliaria</p>
+      </div>
+      <div class="card-content">
+        <form id="login-form" (ngSubmit)="onSubmit()" #form="ngForm">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" placeholder="seu@email.com" [(ngModel)]="email" required/>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input id="senha" type="password" [(ngModel)]="senha" required/>
+          </div>
 
-    <!-- Links extras -->
-    <div class="login-links">
-      <a routerLink="/recuperar-senha">Esqueceu sua senha?</a>
-      <a routerLink="/ajuda">Ajuda</a>
+          <div id="error-msg" class="alert hidden"></div>
+
+          <button type="submit" class="btn btn-primary w-full">
+            Entrar
+          </button>
+        </form>
+
+        <div class="text-center mt-6">
+          <p class="text-sm">
+            Não tem uma conta? 
+            <button class="link-btn" onclick="location.href='/registrar'">
+              Cadastre-se aqui
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

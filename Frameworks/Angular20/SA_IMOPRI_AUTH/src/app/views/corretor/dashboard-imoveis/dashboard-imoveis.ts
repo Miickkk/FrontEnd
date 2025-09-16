@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-dashboard-imoveis',
   imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './dashboard-imoveis.html',
-  styleUrl: './dashboard-imoveis.css'
+  styleUrls: ['./dashboard-imoveis.scss']
 })
 export class DashboardImoveis implements OnInit {
   imoveis: Imovel[] = []; 

@@ -1,59 +1,102 @@
-# SAIMOPRIAUTH
+# SA_IMOPRI_Auth
+# LEVANTAMENTO DE REQUISITOS 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
 
-## Development server
+## Objetivos SMART
+Desenvolver metas claras para o fluxo do projeto.
 
-To start a local development server, run:
+- **Específico**: Desenvolver uma aplicação web que permita cadastro e login de clientes e corretores, gerenciamento de imóveis e registro de interesses. 
+- **Mensurável**: Entregar uma aplicação funcional com protótipos, diagramas, CRUD completo e funcionalidades de autenticação dentro do prazo.
+- **Atingível**: Utilizar Angular, JSON Server e tecnologias conhecidas, com estrutura modular e escalável.
+- **Realista**: Criar um sistema de imobiliária online com dashboard para corretores, sistema de interesses para clientes e controle de acesso por perfil.
+- **Tempo**: 3 semanas.  
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Requisitos funcionais
+A aplicação deve permitir funcionalidades específicas para cada tipo de usuário.
 
-## Code scaffolding
+- **Usuário não logado**: Visualizar página inicial com imóveis em destaque, visualizar detalhes de imóveis, criar conta de cliente.
+- **Cliente**: Todas as funcionalidades públicas, marcar imóveis como “Tenho Interesse”, visualizar lista de imóveis de interesse, editar seu próprio perfil. 
+- **Corretor**: Login (conta criada por administrador), CRUD de imóveis, visualizar lista de clientes interessados em seus imóveis.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+## Requisitos não-funcionais
+O sistema deve ser responsivo, seguro e intuitivo.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Controle de acesso por tipo de usuário (cliente ou corretor) usando Guards do Angular.
+- Autenticação com validação de senha.
+- Implementação de LocalStorage.  
+- Uso de identidade visual (verde-esmeralda, cinza-escuro e branco).
 
-```bash
-ng generate --help
-```
 
-## Building
+## Recursos humanos
+Projeto **individual**, mas organizado em funções caso seja expandido.
 
-To build the project run:
+- Desenvolvedor Frontend / Designer: Protótipos e componentes Angular.
+- Gerente / QA: Testes de usabilidade e fluxo.
+- Backend / Dados: Configuração de JSON Server, db.json e simulação de API.
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Recursos tecnológicos
+Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
-## Running unit tests
+- Figma (protótipos UI/UX)
+- Angular 16  
+- JSON Server  
+- Reactive Forms (formulários)
+- Local Storage (sessão do usuário)
+- Guardas de rota (controle de acesso por perfil)
+- SCSS (estilização)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
+## Cronograma – 1° semana
 
-## Running end-to-end tests
+| Horas | Seg | Ter | Qua 
+|-------|-----|-----|-----
+| 13h   |     |     | Divisão de tarefas/planejamento |
+| 14h   |     |     | Documentação e protótipos no Figma |
+| 15h   |     |     | Estrutura do projeto Angular |
+| 16h   |     |     | Início do desenvolvimento de componentes |
 
-For end-to-end (e2e) testing, run:
+## Cronograma – 2° semana
 
-```bash
-ng e2e
-```
+| Horas | Seg | Ter | Qua 
+|-------|-----|-----|-----
+| 13h   |     |     | Desenvolvimento de CRUD e serviços |
+| 14h   |     |     | Implementação de guards e autenticação |
+| 15h   |     |     | Testes de fluxo e integração |
+| 16h   |     |     | Ajustes de design e responsividade |
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Cronograma – 3° semana
 
-## Additional Resources
+| Horas | Seg | Ter | Qua 
+|-------|-----|-----|-----
+| 13h   |     |     | Revisão geral do projeto |
+| 14h   |     |     | Testes finais e correções |
+| 15h   |     |     | Preparação do vídeo de apresentação |
+| 16h   |     |     | Entrega final e publicação do repositório |
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## DIAGRAMA DE FLUXOS
+
+
+## Diagrama de Fluxo – Login e Redirecionamento
+<img src="diagrama de fluxos - login.png" width="400">
+
+
+## Diagrama de Fluxo – Cliente
+<img src="diagrama de fluxos - cliente.png" width="400">
+
+
+## Diagrama de Fluxo – Corretor
+<img src="diagrama de fluxos - corretor.png" width="600">
+
+
+
+## DIAGRAMA DE CASOS DE USO
+<img src="diagrama de casos de uso.png" width="400">
+
+
+## DIAGRAMA DE CLASSES
+<img src="diagrama de classes.png" width="400">

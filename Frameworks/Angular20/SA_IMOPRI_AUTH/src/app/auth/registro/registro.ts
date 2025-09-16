@@ -27,12 +27,6 @@ export class Registro {
       nome: this.nome,
       email: this.email,
       senha: this.senha,
-      toMap: () => ({
-        id: '',
-        nome: this.nome,
-        email: this.email,
-        senha: this.senha
-      })
     };
     this.auth.registrarCliente(cliente).subscribe({
       next: (user) => {

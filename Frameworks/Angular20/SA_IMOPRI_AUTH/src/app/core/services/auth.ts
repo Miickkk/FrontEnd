@@ -9,7 +9,7 @@ import { Imovel } from '../models/imovel.model';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3004/usuarios';
+  private apiUrl = 'http://localhost:3002/usuarios';
   private readonly CHAVE_USUARIO = 'usuarioLogado';
 
   constructor(private http: HttpClient) {}

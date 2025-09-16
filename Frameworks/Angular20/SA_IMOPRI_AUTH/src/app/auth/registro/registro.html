@@ -1,38 +1,42 @@
-<div class="registro-page">
-  <div class="registro-box">
-    <!-- Título -->
-    <h2>Crie sua conta</h2>
+<div class="register-page">
+  <div class="register-container">
+    
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Criar sua conta</h2>
+      </div>
+      <div class="card-content">
+        <form id="register-form" (ngSubmit)="onSubmit()" #form="ngForm">
+          <div class="form-group"> 
+            <label for="name">Nome *</label>
+            <input id="name" name="nome" type="text" placeholder="Seu nome" [(ngModel)]="nome" required/>
+          </div>
 
-    <!-- Formulário -->
-    <form (ngSubmit)="onSubmit()" class="registro-form">
-      <input 
-        type="text" 
-        [(ngModel)]="nome" 
-        name="nome" 
-        placeholder="Nome completo" 
-        required>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input id="email" name="email" placeholder="seu@email.com" [(ngModel)]="email" required/>
+          </div>
 
-      <input 
-        type="email" 
-        [(ngModel)]="email" 
-        name="email" 
-        placeholder="Email" 
-        required>
+          <div class="form-group">
+            <label for="senha">Senha *</label>
+            <input id="senha" type="password" [(ngModel)]="senha" required/>
+          </div>
 
-      <input 
-        type="password" 
-        [(ngModel)]="senha" 
-        name="senha" 
-        placeholder="Senha" 
-        required>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar senha *</label>
+            <input id="confirmPassword" type="password" placeholder="Digite a senha novamente" required/>
+          </div>
 
-      <button type="submit" class="btn-cadastrar">Cadastrar</button>
-    </form>
+          <div id="error-msg" class="alert hidden"></div>
 
-    <!-- Link para login -->
-    <div class="login-link">
-      <p>Já tem conta?</p>
-      <a routerLink="/login" class="btn-login">Entrar</a>
-    </div>
+          <button type="submit" class="btn btn-primary w-full">Criar conta</button>
+        </form>
+        <div class="text-center mt-6">
+          <p class="text-sm">
+            Já tem uma conta? 
+            <button class="link-btn" onclick="location.href='/login'">Entre aqui</button>
+          </p>
+        </div>
+      </div>
   </div>
 </div>

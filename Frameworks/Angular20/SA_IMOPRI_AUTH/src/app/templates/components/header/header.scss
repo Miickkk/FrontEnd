@@ -1,48 +1,103 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Navbar */
 .navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #f4f4f4;
-  padding: 15px 20px;
-  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
 }
 
-.navbar a.logo {
-  font-size: 1.4rem;
+.navbar-logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  text-decoration: none;
-  color: #009B77; /* verde da marca */
+  color: #002d62;
+  cursor: pointer;
 }
 
-.navItens {
+.navbar-links {
   display: flex;
-  gap: 10px;
+  gap: 1.5rem;
 }
 
-.navLink {
-  padding: 8px 18px;
-  border: 2px solid #009B77;
-  border-radius: 8px;
+a {
   text-decoration: none;
-  font-weight: bold;
-  color: #009B77;
-  transition: 0.2s;
 }
 
-.navLink:hover {
-  background: #009B77;
-  color: #fff;
+.navbar-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.navLink.active {
-  background: #009B77;
-  color: #fff;
+.navbar-links a:hover {
+  color: #002d62;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-outline {
+  padding: 0.5rem 1rem;
+  border: 1px solid #002d62;
+  background: none;
+  color: #002d62;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem;
+  background: #002d62;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #001a3d;
+}
+
+.navbar-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: block;
+  }
 }
