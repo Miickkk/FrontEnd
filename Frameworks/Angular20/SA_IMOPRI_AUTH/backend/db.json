@@ -1,0 +1,73 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "Mike",
+            "email": "corretor@prime.com",
+            "senha": "123",
+            "tipo": "corretor"
+        },
+        {
+            "id": 2,
+            "nome": "Anick",
+            "email": "cliente@email.com",
+            "senha": "123",
+            "tipo": "cliente"
+        }
+    ],
+    "imoveis": [
+        {
+            "id": 1,
+            "nome": "Apartamento Luxo Centro",
+            "cidade": "São Paulo",
+            "valor": 850000,
+            "tipo": "Apartamento",
+            "descricao": "Apartamento de alto padrão no centro de São Paulo, com 3 quartos, suíte, varanda gourmet e 2 vagas na garagem.",
+            "foto": "https://example.com/fotos/apartamento1.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Casa de Praia",
+            "cidade": "Florianópolis",
+            "valor": 1200000,
+            "tipo": "Casa",
+            "descricao": "Casa de frente para o mar com piscina e área de lazer completa.",
+            "foto": "https://example.com/fotos/casa1.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Cobertura Moderna",
+            "cidade": "Belo Horizonte",
+            "valor": 950000,
+            "tipo": "Cobertura",
+            "descricao": "Cobertura duplex com jacuzzi e vista panorâmica da cidade.",
+            "foto": "https://example.com/fotos/cobertura1.jpg"
+        }
+    ],
+    "interessados": [
+        {
+            "id": 1,
+            "nome": "João Silva",
+            "email": "joao.silva@example.com",
+            "telefone": "(11) 99999-8888",
+            "mensagem": "Gostaria de agendar uma visita ao apartamento no centro.",
+            "imovelId": 1
+        },
+        {
+            "id": 2,
+            "nome": "Maria Oliveira",
+            "email": "maria.oliveira@example.com",
+            "telefone": "(48) 98888-7777",
+            "mensagem": "Tenho interesse na casa de praia, ainda está disponível?",
+            "imovelId": 2
+        },
+        {
+            "id": 3,
+            "nome": "Carlos Andrade",
+            "email": "carlos.andrade@example.com",
+            "telefone": "(31) 97777-6666",
+            "mensagem": "Queria mais informações sobre a cobertura moderna.",
+            "imovelId": 3
+        }
+    ]
+}

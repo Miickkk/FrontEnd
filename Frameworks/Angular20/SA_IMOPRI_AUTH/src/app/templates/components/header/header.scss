@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar a.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #009B77; /* verde da marca */
+}
+
+.navItens {
+  display: flex;
+  gap: 10px;
+}
+
+.navLink {
+  padding: 8px 18px;
+  border: 2px solid #009B77;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #009B77;
+  transition: 0.2s;
+}
+
+.navLink:hover {
+  background: #009B77;
+  color: #fff;
+}
+
+.navLink.active {
+  background: #009B77;
+  color: #fff;
+}

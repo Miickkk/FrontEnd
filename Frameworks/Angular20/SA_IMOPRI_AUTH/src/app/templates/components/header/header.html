@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <a routerLink="/">Imobiliária Prime</a>
+
+    <div class="navItens">
+
+        <a routerLink="/home" class="navLink">Home</a>
+
+
+        @if (auth.isAuthenticated()) {
+        <a routerLink="/login">
+            <button (click)="auth.logout()" class="btn-outline">Sair</button>
+        </a>
+        }
+
+
+        @if (auth.getPerfilUsuario() === 'corretor') {
+        <a routerLink="/dashboard" class="navLink">
+            <button class="btn-primary">Dashboard</button>
+        </a>
+        }
+
+
+        @if (auth.getPerfilUsuario() === 'cliente') {
+        <a routerLink="/meus-interesses" class="navLink">
+            <button class="btn-primary">Meus Interesses</button>
+        </a>
+        }
+
+
+        @if (!auth.isAuthenticated()) {
+        <a routerLink="/login" class="navLink">
+            <button class="btn-outline">Entrar</button>
+        </a>
+        <a routerLink="/register-cliente" class="navLink">
+            <button class="btn-primary">Cadastrar</button>
+        </a>
+        }
+    </div>
+    
+</nav>
