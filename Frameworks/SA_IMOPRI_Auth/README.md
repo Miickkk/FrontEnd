@@ -95,7 +95,8 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 ## DIAGRAMA DE CASOS DE USO
-<https://uml.planttext.com/plantuml/png/VP9DQiD038Nt1jz1P5KlSeKIC5qKMYWKkbTd54SmFur6BgMbX-aPUeHSh3E9xJJOP3VIV6_qdfXDKXJjlQihHri5ZI3SxHGi2ndb6EeAZKQ1rZ45fQcC8fGFO_t2YHMFG5qLAORE4QoUEIbvX7iVNzdnuKSOuKdOqmg-wWhEGbYlR-4cbpqw_aG1zeVVT-84vC5IDhhlgLcIaEHxHRUZb0-3pYsXRPukO69GBAGvPMgAPnWJdiY7s75ePkr755EivOPGIbIy_Pzt-GQNxPvp56-ZS4xVMIxq6ycMtMXfsFBCqqM_HOj9PHhb5fZXzIl0Xt4zNoE6ECFIqfG5RKmP_wwh3GLx_4j_>
+<img src="diagrama de casos de uso.png" width="400">
 
 
 ## DIAGRAMA DE CLASSES
+<img src="diagrama de classes.png" width="400">
