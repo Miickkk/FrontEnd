@@ -1,0 +1,118 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.registro-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #009B77;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input {
+      padding: 12px;
+      border-radius: 25px;
+      border: 2px solid #009B77;
+      background-color: #ffffff;
+      font-size: 15px;
+      transition: 0.3s;
+
+      &::placeholder {
+        color: #777;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #006b55;
+        box-shadow: 0 0 6px rgba(0, 155, 119, 0.4);
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      background-color: #009B77;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 60%;
+      align-self: center;
+
+      &:hover {
+        background-color: #006b55;
+      }
+    }
+  }
+
+  .alert {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+
+    &.alert-error {
+      background-color: #ff6b6b;
+      color: #fff;
+    }
+
+    &.alert-success {
+      background-color: #27ae60;
+      color: #fff;
+    }
+  }
+
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+
+    .btn-login {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 24px;
+      border-radius: 25px;
+      border: 2px solid #009B77;
+      color: #009B77;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #009B77;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .registro-container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+}

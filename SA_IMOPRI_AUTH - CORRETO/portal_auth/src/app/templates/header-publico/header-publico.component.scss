@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  border-bottom: 3px solid #009B77; // linha verde no rodapé do header
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      height: 40px;
+    }
+
+    span {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1.2rem;
+      color: #009B77;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .navItens {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end; // garante que fiquem alinhados no final do header
+
+    .navLink {
+      padding: 8px 16px;
+      border: 2px solid #009B77;
+      border-radius: 6px 6px 0 0; // mantém só em cima
+      color: #009B77;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #009B77;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: #009B77;
+        color: #fff;
+      }
+    }
+  }
+}

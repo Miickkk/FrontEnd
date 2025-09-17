@@ -1,0 +1,62 @@
+.listar-curriculos {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 20px;
+    width: 50vh;
+    background-color: #fff;
+    border: 2px solid #002d62;
+    border-radius: 12px;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.295);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100%;
+      height: 80px; 
+      object-fit: contain;
+      background-color: #f4f4f4; 
+    }
+
+    .card-body {
+      padding: 10px;
+
+      .card-title {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 1.1rem;
+        color: #002d62;
+        font-weight: bold;
+        margin: 4px 0;
+      }
+
+      .card-text {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 0.85rem;
+        color: #444;
+        margin-bottom: 4px;
+
+        &:last-child {
+          font-weight: 500;
+          color: #222;
+        }
+      }
+    }
+  }
+}

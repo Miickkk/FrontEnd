@@ -1,0 +1,52 @@
+<div class="home-container">
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Bem-vindo à Prime Imobiliária</h1>
+    <p>Encontre seu imóvel ideal com segurança e confiança.</p>
+  </header>
+
+  <!-- DESTAQUES -->
+  <section id="imoveis" class="imoveis-destaque">
+    <h2>Imóveis de Destaque</h2>
+    <input type="text" placeholder="Procurar imóvel" class="search-bar" />
+
+    <div class="cards-container">
+      <div class="card" *ngFor="let imovel of imoveis">
+        <div class="card-header">
+          <h3>{{ imovel.titulo }}</h3>
+          <span
+            class="heart"
+            [class.favorito]="imovel.favorito"
+            (click)="adicionarInteressado(imovel)">
+            ♥
+          </span>
+        </div>
+        <p>{{ imovel.descricao }}</p>
+        <button class="btn-secondary">Ver Imóvel</button>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <!-- SERVIÇOS -->
+  <section class="features">
+    <div class="feature">
+      <h2>Compra e Venda</h2>
+      <p>Facilitamos todo o processo para você encontrar o imóvel perfeito.</p>
+    </div>
+    <div class="feature">
+      <h2>Aluguéis</h2>
+      <p>Opções de aluguel que cabem no seu bolso e estilo de vida.</p>
+    </div>
+    <div class="feature">
+      <h2>Consultoria</h2>
+      <p>Equipe especializada para te orientar em todas as etapas.</p>
+    </div>
+  </section>
+</div>
+
+<br>
+<br>
+
+<app-footer></app-footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+<div class="interessados-container">
+  <h2>Imóveis Interessados</h2>
+
+  <div class="cards-container">
+    <div class="card" *ngFor="let imovel of imoveisInteressados">
+      <div class="card-header">
+        <h3>{{ imovel.nome }}</h3> <!-- Ajuste: usar 'nome' do model MeuImovel -->
+        <span class="heart favorito">♥</span>
+      </div>
+      <p>{{ imovel.descricao }}</p>
+      <button class="btn-secondary">Ver Imóvel</button>
+    </div>
+  </div>
+</div>

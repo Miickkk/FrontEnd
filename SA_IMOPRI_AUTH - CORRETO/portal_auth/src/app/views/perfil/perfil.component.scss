@@ -1,0 +1,93 @@
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.perfil-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  border: 3px solid #009B77;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.perfil-avatar {
+  flex: 0 0 120px;
+  text-align: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    filter: grayscale(30%) brightness(0.9);
+  }
+}
+
+.perfil-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+  width: 100%;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 0.9rem;
+      color: #009B77;
+      margin-bottom: 0.3rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.6rem 1rem;
+      border: 2px solid #009B77;
+      border-radius: 20px;
+      outline: none;
+      font-size: 1rem;
+      transition: border 0.3s;
+
+      &:focus {
+        border-color: #007a5f;
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 80px;
+      border-radius: 12px;
+      grid-column: span 2;
+    }
+  }
+
+  .interesses {
+    grid-column: span 2;
+  }
+}
+
+.btn-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+
+  .btn-salvar {
+    background: #009B77;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      background: #007a5f;
+    }
+  }
+}

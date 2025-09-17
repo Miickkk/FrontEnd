@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<section class="listar-interessados">
+  <div class="top-section">
+    <h2 class="titulo-interessados">Interessados nos Imóveis</h2>
+    <div class="button">
+      <button class="novo-interessado" routerLink="/novo-interessado">Adicionar Interessado</button>
+    </div>
+  </div>
+
+  <div class="container-cards">
+    <div *ngFor="let interessado of interessados" class="card">
+      <div class="card-body">
+        <h5 class="card-title">ID: {{ interessado.id }}</h5>
+        <h5 class="card-title">Nome: {{ interessado.nome }}</h5>
+        <p class="card-text">Email: {{ interessado.email }}</p>
+        <p class="card-text">Telefone: {{ interessado.telefone }}</p>
+        <p class="card-text">Mensagem: {{ interessado.mensagem }}</p>
+        <p class="card-text">Código do Imóvel: {{ interessado.imovelId }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,18 @@
+<div class="corretor-container">
+
+  <!-- Meus Imóveis -->
+  <section *ngIf="abaAtiva === 'meus-imoveis'" class="listar-imoveis">
+    <h2>Meus Imóveis</h2>
+    <div class="search-container">
+      <input type="text" placeholder="Procurar imóvel">
+    </div>
+
+    <div class="container-cards">
+      <div class="card" *ngFor="let imovel of meusImoveis">
+        <h3>{{ imovel.nome }}</h3>
+        <p>{{ imovel.descricao }}</p>
+        <button class="btn-ver">Ver Imóvel</button>
+      </div>
+    </div>
+  </section>
+</div>

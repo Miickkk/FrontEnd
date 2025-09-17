@@ -1,0 +1,75 @@
+.interessados-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h2 {
+    color: #009B77;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 2px solid #009B77;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        color: #009B77;
+        font-size: 1.2rem;
+      }
+
+      .heart {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #ccc;
+
+        &.favorito {
+          color: #009B77;
+        }
+      }
+    }
+
+    p {
+      margin: 1rem 0;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .btn-secondary {
+      background: #009B77;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+
+      &:hover {
+        background: #007a5f;
+      }
+    }
+  }
+}
