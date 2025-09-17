@@ -8,7 +8,6 @@ import { InternaComponent } from './views/interna/interna.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { MeusImoveisComponent } from './views/meus-imoveis/meus-imoveis.component';
 import { InteressadosComponent } from './views/interessados/interessados.component';
-import { HeaderComponent } from './templates/header/header.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +15,16 @@ import { InternaCorretorComponent } from './views/interna-corretor/interna-corre
 import { ImoveisInteressadosComponent } from './views/imoveis-interessados/imoveis-interessados.component';
 import { HeaderPublicoComponent } from './templates/header-publico/header-publico.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
+
+// Não-standalone
+import { HeaderComponent } from './templates/header/header.component';
+
+// Standalone
 import { HeaderCorretorComponent } from './templates/header-corretor/header-corretor.component';
+
+// Necessário para router-outlet
+import { RouterModule } from '@angular/router';
+import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -27,20 +35,22 @@ import { HeaderCorretorComponent } from './templates/header-corretor/header-corr
     RegistroComponent,
     MeusImoveisComponent,
     InteressadosComponent,
-    HeaderComponent,
-    FooterComponent,
     InternaCorretorComponent,
     ImoveisInteressadosComponent,
-    HeaderPublicoComponent,
     PerfilComponent,
-    HeaderCorretorComponent
+    HeaderPublicoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,            // ✅ para <router-outlet>
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HeaderCorretorComponent, // ✅ standalone
+    HeaderComponent,         // ✅ standalone
+    FooterComponent,         // ✅ standalone
+    CadastrarComponent  // ✅ standalone → imports
   ],
   providers: [],
   bootstrap: [AppComponent]

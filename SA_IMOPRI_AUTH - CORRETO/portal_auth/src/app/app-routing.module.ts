@@ -10,6 +10,7 @@ import { InteressadosComponent } from './views/interessados/interessados.compone
 import { ImoveisInteressadosComponent } from './views/imoveis-interessados/imoveis-interessados.component';
 import { AuthGuard } from './guardas/auth.guard';
 import { PerfilComponent } from './views/perfil/perfil.component';
+import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 
 const routes: Routes = [
   { path: '', component: InternaComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'interessados', component: InteressadosComponent, canActivate: [AuthGuard] },
   { path: 'interna', component: InternaComponent},
   {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
+  { path: 'cadastrar', component: CadastrarComponent, canActivate: [AuthGuard] },
 
   // Painel admin
   { path: 'interna-corretor', component: InternaCorretorComponent, canActivate: [AuthGuard] },

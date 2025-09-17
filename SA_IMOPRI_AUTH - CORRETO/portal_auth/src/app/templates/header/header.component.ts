@@ -1,13 +1,33 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  esconderHome: boolean = false;
 
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.atualizarHeader(this.router.url); // inicial
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: Event) => {
+        const navEnd = event as NavigationEnd;
+        this.atualizarHeader(navEnd.urlAfterRedirects);
+      });
+  }
+
+  atualizarHeader(url: string) {
+    // Esconde Home e outros links quando a rota é /interna
+    this.esconderHome = url.startsWith('/interna');
+  }
 }

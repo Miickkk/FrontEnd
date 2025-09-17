@@ -1,18 +1,21 @@
 :host {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-color: #009B77; // fundo verde
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .login-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   padding: 40px;
   border-radius: 12px;
   text-align: center;
   width: 360px;
+  margin: 200px auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
   .logo {

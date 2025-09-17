@@ -1,0 +1,87 @@
+.cadastro-imovel {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+
+  h2 {
+    color: #009B77;
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .linha {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+
+      label {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #009B77;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1.5px solid #009B77;
+        border-radius: 25px;
+        outline: none;
+        font-size: 14px;
+        transition: 0.3s;
+        background: #f9f9f9;
+
+        &:focus {
+          border-color: #006B55;
+          box-shadow: 0 0 5px rgba(0, 155, 119, 0.4);
+        }
+      }
+
+      textarea {
+        resize: none;
+        border-radius: 15px;
+      }
+
+      &.flex-2 {
+        flex: 2;
+      }
+
+      &.flex-1 {
+        flex: 1;
+      }
+    }
+
+    button {
+      background: #009B77;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+      align-self: center;
+      margin-top: 10px;
+
+      &:hover {
+        background: #006B55;
+      }
+    }
+  }
+}
