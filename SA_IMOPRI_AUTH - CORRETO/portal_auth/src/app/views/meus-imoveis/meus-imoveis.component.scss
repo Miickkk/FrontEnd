@@ -1,60 +1,90 @@
-.listar-curriculos {
+.listar-imoveis {
   display: flex;
   flex-direction: column;
   padding: 20px;
 
-
   .container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
     justify-content: center;
   }
 
   .card {
-    padding: 20px;
-    width: 50vh;
-    background-color: #fff;
-    border: 2px solid #002d62;
+    background-color: #009B77; // cor principal
+    border: 2px solid #009B77;
     border-radius: 12px;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.295);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    img {
-      width: 100%;
-      height: 80px; 
-      object-fit: contain;
-      background-color: #f4f4f4; 
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      border-color: darken(#009B77, 5%);
     }
 
     .card-body {
-      padding: 10px;
+      padding: 20px;
 
       .card-title {
         font-family: 'Segoe UI', sans-serif;
-        font-size: 1.1rem;
-        color: #002d62;
+        font-size: 1.8rem;
+        color: #ffffff;
         font-weight: bold;
-        margin: 4px 0;
+        margin: 6px 0;
       }
 
       .card-text {
         font-family: 'Segoe UI', sans-serif;
-        font-size: 0.85rem;
-        color: #444;
-        margin-bottom: 4px;
+        font-size: 1rem;
+        color: #ffffff;
+        margin-bottom: 10px;
 
         &:last-child {
           font-weight: 500;
-          color: #222;
+        }
+      }
+
+      /* Botões de ação */
+      .acoes {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+
+        .btn-editar {
+          background-color: #ffffff;
+          color: #009B77;
+          border: 2px solid #ffffff;
+          padding: 6px 12px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: #045241;
+            color: #ffffff;
+            border-color: #045241;
+          }
+        }
+
+        .btn-excluir {
+          background-color: #e74c3c;
+          color: #ffffff;
+          border: 2px solid #e74c3c;
+          padding: 6px 12px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: #811c11;
+            border-color: #811c11;
+          }
         }
       }
     }

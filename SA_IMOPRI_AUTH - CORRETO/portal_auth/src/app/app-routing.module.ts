@@ -4,7 +4,6 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { InternaComponent } from './views/interna/interna.component';
-import { InternaCorretorComponent } from './views/interna-corretor/interna-corretor.component';
 import { MeusImoveisComponent } from './views/meus-imoveis/meus-imoveis.component';
 import { InteressadosComponent } from './views/interessados/interessados.component';
 import { ImoveisInteressadosComponent } from './views/imoveis-interessados/imoveis-interessados.component';
@@ -22,12 +21,9 @@ const routes: Routes = [
   { path: 'imoveis-interessados', component: ImoveisInteressadosComponent, canActivate: [AuthGuard] },
   { path: 'meus-imoveis', component: MeusImoveisComponent, canActivate: [AuthGuard] },
   { path: 'interessados', component: InteressadosComponent, canActivate: [AuthGuard] },
-  { path: 'interna', component: InternaComponent},
-  {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
+  { path: 'interna', component: InternaComponent },
+  { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] },
   { path: 'cadastrar', component: CadastrarComponent, canActivate: [AuthGuard] },
-
-  // Painel admin
-  { path: 'interna-corretor', component: InternaCorretorComponent, canActivate: [AuthGuard] },
 
   // Rota coringa
   { path: '**', redirectTo: 'interna' },
@@ -37,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

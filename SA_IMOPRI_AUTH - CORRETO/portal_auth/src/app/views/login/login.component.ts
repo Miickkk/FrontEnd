@@ -21,7 +21,7 @@ export class LoginComponent {
 
         // Redireciona dependendo da permissão
         if (usuario.permissao === 'corretor') {
-          this.router.navigate(['/interna-corretor']); // página admin
+          this.router.navigate(['/meus-imoveis']); // página admin
         } else {
           this.router.navigate(['/home']); // página de usuário comum
         }

@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
     }
 
     // Apenas corretor pode acessar /interna-corretor
-    if (window.location.href.includes('interna-corretor') && cliente.permissao !== 'corretor') {
+    if (window.location.href.includes('meus-imoveis') && cliente.permissao !== 'corretor') {
       this.router.navigate(['/home']);
       return false;
     }

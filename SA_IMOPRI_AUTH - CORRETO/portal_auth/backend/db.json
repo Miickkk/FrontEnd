@@ -39,160 +39,22 @@
       "foto": "https://example.com/fotos/apartamento1.jpg"
     },
     {
-      "id": "2",
-      "nome": "Casa de Praia",
-      "cidade": "Florianópolis",
-      "valor": 1200000,
-      "tipo": "Casa",
-      "descricao": "Casa de frente para o mar com piscina e área de lazer completa.",
-      "foto": "https://example.com/fotos/casa1.jpg"
-    },
-    {
-      "id": "3",
-      "nome": "Cobertura Moderna",
-      "cidade": "Belo Horizonte",
-      "valor": 950000,
-      "tipo": "Cobertura",
-      "descricao": "Cobertura duplex com jacuzzi e vista panorâmica da cidade.",
-      "foto": "https://example.com/fotos/cobertura1.jpg"
+      "id": "4",
+      "titulo": "Casa Jardim Bela Vista",
+      "categoria": "Apartamento",
+      "cidade": "São Paulo",
+      "descricao": "Casa espaçosa de 3 quartos, suíte principal com closet, sala de estar e jantar integradas, cozinha planejada e quintal com área gourmet. Bairro tranquilo, perfeito para quem deseja privacidade e lazer.",
+      "valor": 350
     }
   ],
   "interessados": [
     {
-      "id": "1",
-      "nome": "João Silva",
-      "email": "joao.silva@example.com",
-      "telefone": "(11) 99999-8888",
-      "mensagem": "Gostaria de agendar uma visita ao apartamento no centro.",
-      "imovelId": 1
-    },
-    {
-      "id": "2",
-      "nome": "Maria Oliveira",
-      "email": "maria.oliveira@example.com",
-      "telefone": "(48) 98888-7777",
-      "mensagem": "Tenho interesse na casa de praia, ainda está disponível?",
-      "imovelId": 2
-    },
-    {
-      "id": "3",
-      "nome": "Carlos Andrade",
-      "email": "carlos.andrade@example.com",
-      "telefone": "(31) 97777-6666",
-      "mensagem": "Queria mais informações sobre a cobertura moderna.",
-      "imovelId": 3
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "3",
-      "nome": "Cobertura de Luxo Frente Mar",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Piscina privativa, 4 suítes e acabamento premium.",
-      "imovelId": 3
-    },
-    {
-      "id": "6",
+      "id": 6,
       "nome": "Sobrado em Condomínio Fechado",
       "email": "",
       "telefone": "",
       "mensagem": "Segurança 24h, 3 dormitórios e área gourmet.",
       "imovelId": 6
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
-    },
-    {
-      "id": "1",
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
-      "imovelId": 1
     },
     {
       "id": 1,
@@ -201,6 +63,38 @@
       "telefone": "",
       "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
       "imovelId": 1
+    },
+    {
+      "id": 2,
+      "nome": "Casa Térrea com Quintal Amplo",
+      "email": "",
+      "telefone": "",
+      "mensagem": "Residência arejada com 3 quartos e área verde.",
+      "imovelId": 2
+    },
+    {
+      "id": 3,
+      "nome": "Cobertura de Luxo Frente Mar",
+      "email": "",
+      "telefone": "",
+      "mensagem": "Piscina privativa, 4 suítes e acabamento premium.",
+      "imovelId": 3
+    },
+    {
+      "id": 2,
+      "nome": "Casa Térrea com Quintal Amplo",
+      "email": "",
+      "telefone": "",
+      "mensagem": "Residência arejada com 3 quartos e área verde.",
+      "imovelId": 2
+    },
+    {
+      "id": 2,
+      "nome": "Casa Térrea com Quintal Amplo",
+      "email": "",
+      "telefone": "",
+      "mensagem": "Residência arejada com 3 quartos e área verde.",
+      "imovelId": 2
     }
   ]
 }
