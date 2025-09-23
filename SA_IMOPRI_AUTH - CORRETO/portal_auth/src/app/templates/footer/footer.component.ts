@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// COMPONENTE RODAPÉ
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

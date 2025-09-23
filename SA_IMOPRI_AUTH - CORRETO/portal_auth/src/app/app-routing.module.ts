@@ -12,12 +12,13 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 
 const routes: Routes = [
+  // ROTAS PÚBLICAS
   { path: '', component: InternaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
 
-  // Usuários comuns
+  // ROTAS PROTEGIDAS
   { path: 'imoveis-interessados', component: ImoveisInteressadosComponent, canActivate: [AuthGuard] },
   { path: 'meus-imoveis', component: MeusImoveisComponent, canActivate: [AuthGuard] },
   { path: 'interessados', component: InteressadosComponent, canActivate: [AuthGuard] },
@@ -25,7 +26,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] },
   { path: 'cadastrar', component: CadastrarComponent, canActivate: [AuthGuard] },
 
-  // Rota coringa
+  // ROTA CORINGA - REDIRECIONA PARA 'interna' SE A ROTA NÃO FOR ENCONTRADA
   { path: '**', redirectTo: 'interna' },
 ];
 

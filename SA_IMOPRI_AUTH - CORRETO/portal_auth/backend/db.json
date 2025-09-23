@@ -9,92 +9,41 @@
     },
     {
       "id": "2",
-      "nome": "Anick",
-      "email": "cliente@email.com",
-      "senha": "123",
-      "tipo": "cliente"
-    },
-    {
-      "id": "bb63",
-      "nome": "Anick da silva lima",
+      "nome": "Nick",
       "email": "anickmurilomeyretuti@gmail.com",
-      "senha": "Miickk09",
-      "logado": false
-    },
-    {
-      "id": "cf7b",
-      "nome": "Mick",
-      "email": "miickk09@gmail.com",
-      "senha": "1234"
+      "senha": "Miickk09"
     }
   ],
+
   "imoveis": [
     {
       "id": "1",
-      "nome": "Apartamento Luxo Centro",
-      "cidade": "São Paulo",
-      "valor": 850000,
-      "tipo": "Apartamento",
-      "descricao": "Apartamento de alto padrão no centro de São Paulo, com 3 quartos, suíte, varanda gourmet e 2 vagas na garagem.",
-      "foto": "https://example.com/fotos/apartamento1.jpg"
-    },
-    {
-      "id": "4",
-      "titulo": "Casa Jardim Bela Vista",
+      "titulo": "Apartamento Moderno no Centro",
       "categoria": "Apartamento",
       "cidade": "São Paulo",
-      "descricao": "Casa espaçosa de 3 quartos, suíte principal com closet, sala de estar e jantar integradas, cozinha planejada e quintal com área gourmet. Bairro tranquilo, perfeito para quem deseja privacidade e lazer.",
-      "valor": 350
+      "descricao": "2 quartos, sala integrada e varanda panorâmica.",
+      "valor": 850000
+    },
+    {
+      "id": "2",
+      "titulo": "Casa Jardim Bela Vista",
+      "categoria": "Casa",
+      "cidade": "São Paulo",
+      "descricao": "Residência arejada com 3 quartos, área verde e churrasqueira.",
+      "valor": 8200
     }
   ],
-  "interessados": [
+
+  "interesses": [
     {
-      "id": 6,
-      "nome": "Sobrado em Condomínio Fechado",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Segurança 24h, 3 dormitórios e área gourmet.",
-      "imovelId": 6
+      "id": "1",
+      "clienteId": 2,
+      "imovelId": 2
     },
     {
-      "id": 1,
-      "nome": "Apartamento Moderno no Centro",
-      "email": "",
-      "telefone": "",
-      "mensagem": "2 quartos, sala integrada e varanda panorâmica.",
+      "id": "2",
+      "clienteId": 2,
       "imovelId": 1
-    },
-    {
-      "id": 2,
-      "nome": "Casa Térrea com Quintal Amplo",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Residência arejada com 3 quartos e área verde.",
-      "imovelId": 2
-    },
-    {
-      "id": 3,
-      "nome": "Cobertura de Luxo Frente Mar",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Piscina privativa, 4 suítes e acabamento premium.",
-      "imovelId": 3
-    },
-    {
-      "id": 2,
-      "nome": "Casa Térrea com Quintal Amplo",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Residência arejada com 3 quartos e área verde.",
-      "imovelId": 2
-    },
-    {
-      "id": 2,
-      "nome": "Casa Térrea com Quintal Amplo",
-      "email": "",
-      "telefone": "",
-      "mensagem": "Residência arejada com 3 quartos e área verde.",
-      "imovelId": 2
     }
   ]
 }

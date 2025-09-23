@@ -1,3 +1,4 @@
+// MODELO DE DADOS DO IMÓVEL
 export class MeuImovel {
   constructor(
     public id?: number,
@@ -9,6 +10,7 @@ export class MeuImovel {
     public foto?: string
   ) {}
 
+  // OBJ => JSON
   public toMap(): { [key: string]: any } {
     return {
       id: this.id,
@@ -21,6 +23,7 @@ export class MeuImovel {
     };
   }
 
+  // JSON => OBJ
   static fromMap(map: any): MeuImovel {
     return new MeuImovel(
       map.id,

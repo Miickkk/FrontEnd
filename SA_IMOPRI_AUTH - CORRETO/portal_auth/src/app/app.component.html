@@ -1,1 +1,5 @@
+<!-- NOTIFICAÇÕES -->
+<div class="notificacao" *ngIf="mensagem$ | async as mensagem">
+  {{ mensagem }}
+</div>
 <router-outlet></router-outlet>

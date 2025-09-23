@@ -1,11 +1,8 @@
-// arquivo responsável pela modelagem de dados para interessados
+// MODELO DE DADOS DO INTERESSADO
 export class Interessado {
   constructor(
-    public id?: number,
-    public nome?: string,
-    public email?: string,
-    public telefone?: string,
-    public mensagem?: string,
+    public id?: string,
+    public clienteId?: number,
     public imovelId?: number
   ) {}
 
@@ -13,10 +10,7 @@ export class Interessado {
   public toMap(): { [key: string]: any } {
     return {
       id: this.id,
-      nome: this.nome,
-      email: this.email,
-      telefone: this.telefone,
-      mensagem: this.mensagem,
+      clienteId: this.clienteId,
       imovelId: this.imovelId
     };
   }
@@ -25,10 +19,7 @@ export class Interessado {
   static fromMap(map: any): Interessado {
     return new Interessado(
       map.id,
-      map.nome,
-      map.email,
-      map.telefone,
-      map.mensagem,
+      map.clienteId,
       map.imovelId
     );
   }

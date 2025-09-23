@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-// Componentes não-standalone
+// COMPONENTES NAO STANDALONE
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
@@ -14,7 +14,7 @@ import { RegistroComponent } from './views/registro/registro.component';
 import { ImoveisInteressadosComponent } from './views/imoveis-interessados/imoveis-interessados.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 
-// Componentes standalone
+// COMPONENTES STANDALONE
 import { MeusImoveisComponent } from './views/meus-imoveis/meus-imoveis.component';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { HeaderComponent } from './templates/header/header.component'; // standalone
@@ -23,6 +23,8 @@ import { FooterComponent } from './templates/footer/footer.component'; // standa
 import { HeaderPublicoComponent } from './templates/header-publico/header-publico.component'; // não-standalone
 
 @NgModule({
+
+  // NAO STANDALONE
   declarations: [
     AppComponent,
     HomeComponent,
@@ -33,6 +35,8 @@ import { HeaderPublicoComponent } from './templates/header-publico/header-public
     PerfilComponent,
     HeaderPublicoComponent,
   ],
+
+  // MÓDULOS DO ANGULAR
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,7 +45,7 @@ import { HeaderPublicoComponent } from './templates/header-publico/header-public
     FormsModule,
     HttpClientModule,
 
-    // Standalone
+    // STANDALONE
     MeusImoveisComponent,
     CadastrarComponent,
     HeaderComponent,

@@ -8,15 +8,17 @@ import { AuthService } from '../services/auth.service';
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
+  // VERIFICA SE O USUÁRIO ESTÁ AUTENTICADO 
   canActivate(): boolean {
     const cliente = this.authService.clienteAtual();
 
+    // SE NÃO ESTIVER AUTENTICADO, REDIRECIONA PARA LOGIN
     if (!cliente) {
       this.router.navigate(['/login']);
       return false;
     }
 
-    // Apenas corretor pode acessar /interna-corretor
+    // RESTRIÇÃO DE ACESSO PARA USUÁRIOS COMUNS
     if (window.location.href.includes('meus-imoveis') && cliente.permissao !== 'corretor') {
       this.router.navigate(['/home']);
       return false;

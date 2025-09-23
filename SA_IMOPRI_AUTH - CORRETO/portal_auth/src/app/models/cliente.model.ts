@@ -1,3 +1,4 @@
+// MODELO DE DADOS DO CLIENTE
 export class Cliente {
   constructor(
     public id: number,
@@ -6,7 +7,7 @@ export class Cliente {
     public senha: string
   ) {}
 
-  // OBJ to JSON
+  // OBJ => JSON
   public toMap(): { [key: string]: any } {
     return {
       id: this.id,
@@ -16,7 +17,7 @@ export class Cliente {
     };
   }
 
-  // JSON to OBJ
+  // JSON => OBJ
   static fromMap(map: any): Cliente {
     return new Cliente(
       map.id,

@@ -1,35 +1,44 @@
+// imoveis-interessados.component.ts
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { InteressadosService } from 'src/app/services/interessados.service';
-import { MeuImovel } from 'src/app/models/meu-imovel.model';
-import { Interessado } from 'src/app/models/interessado.model';
+import { NotificacaoService } from 'src/app/services/notificacao.service';
+import { forkJoin, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-imoveis-interessados',
   templateUrl: './imoveis-interessados.component.html',
-  styleUrls: ['./imoveis-interessados.component.scss'],
+  styleUrls: ['./imoveis-interessados.component.scss']
 })
 export class ImoveisInteressadosComponent implements OnInit {
-  imoveisInteressados: MeuImovel[] = [];
+  public imoveisFavoritos: any[] = [];
+  private clienteId = 2;  // pegar do login
+  private apiUrl = 'http://localhost:3004';
 
-  constructor(private interessadosService: InteressadosService) {}
+  constructor(
+    private interessadosService: InteressadosService,
+    private http: HttpClient,
+    private notificacaoService: NotificacaoService
+  ) {}
 
-  ngOnInit() {
-    this.interessadosService
-      .getInteressados()
-      .subscribe((interessados: Interessado[]) => {
-        // Transformar cada interessado em MeuImovel usando os dados que você tem
-        this.imoveisInteressados = interessados.map(
-          (i) =>
-            new MeuImovel(
-              i.imovelId, // id do imóvel
-              i.nome, // título do imóvel (usando nome do interessado)
-              '', // cidade (não temos, pode ajustar depois)
-              undefined, // valor (não temos, pode ajustar)
-              '', // tipo (não temos)
-              i.mensagem, // descrição
-              undefined // foto (pode adicionar se tiver)
-            )
+  ngOnInit(): void {
+    this.carregarFavoritosDoCliente();
+  }
+
+  carregarFavoritosDoCliente() {
+    this.interessadosService.getFavoritosByCliente(this.clienteId).subscribe({
+      next: interesses => {
+        const requests = interesses.map(i =>
+          this.http.get<any>(`${this.apiUrl}/imoveis/${i.imovelId}`).pipe(
+            catchError(() => of(null))
+          )
         );
-      });
+        forkJoin(requests).subscribe(imoveis =>
+          this.imoveisFavoritos = imoveis.filter(i => i)
+        );
+      },
+      error: () => this.notificacaoService.mostrar('❌ Erro ao buscar favoritos.')
+    });
   }
 }

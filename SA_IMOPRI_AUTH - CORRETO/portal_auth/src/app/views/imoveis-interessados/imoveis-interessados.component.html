@@ -1,21 +1,13 @@
+<!-- imoveis-interessados.component.html -->
 <app-header></app-header>
-<div class="interessados-container">
-  <h2>Imóveis Interessados</h2>
-
+<section class="interessados-container">
+  <h2>Meus Favoritos</h2>
   <div class="cards-container">
-    <div class="card" *ngFor="let imovel of imoveisInteressados">
-      <div class="card-header">
-        <h3>{{ imovel.nome }}</h3> <!-- Ajuste: usar 'nome' do model MeuImovel -->
-        <span class="heart favorito">♥</span>
-      </div>
+    <div class="card" *ngFor="let imovel of imoveisFavoritos">
+      <h3>{{ imovel.titulo }}</h3>
       <p>{{ imovel.descricao }}</p>
-      <button class="btn-secondary">Ver Imóvel</button>
+      <p><strong>Cidade:</strong> {{ imovel.cidade }}</p>
     </div>
   </div>
-</div>
-
-<br>
-<br>
-
+</section>
 <app-footer></app-footer>
-<router-outlet></router-outlet>

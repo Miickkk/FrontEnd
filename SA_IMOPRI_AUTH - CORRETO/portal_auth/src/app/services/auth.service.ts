@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { map, Observable, switchMap, throwError } from 'rxjs';
 
+// SERVIÇO DE AUTENTICAÇÃO
 @Injectable({
   providedIn: 'root'
 })
@@ -12,19 +13,26 @@ export class AuthService {
 
   constructor(private router: Router, private http: HttpClient) {}
 
-  // Registrar novo cliente
-  registrar(cliente: any): Observable<any> {
-    return this.http.get<any[]>(`${this.apiUrl}?email=${cliente.email}`).pipe(
-      switchMap((res) => {
-        if (res.length > 0) {
-          return throwError(() => new Error('Cliente já cadastrado'));
-        }
-        return this.http.post<any>(this.apiUrl, cliente);
-      })
-    );
-  }
+  // REGISTRO
+registrar(cliente: any): Observable<any> {
+  return this.http.get<any[]>(this.apiUrl).pipe(
+    switchMap((clientes) => {
 
-  // Login
+      // VERIFICA SE O EMAIL JÁ ESTÁ CADASTRADO
+      if (clientes.some(c => c.email === cliente.email)) {
+        return throwError(() => new Error('Cliente já cadastrado'));
+      }
+
+      // GERA O PRÓXIMO ID
+      const maxId = clientes.length ? Math.max(...clientes.map(c => Number(c.id))) : 0;
+      cliente.id = maxId + 1;
+
+      return this.http.post<any>(this.apiUrl, cliente);
+    })
+  );
+}
+
+  // LOGIN
   login(credenciais: { email: string; senha: string }): Observable<any> {
     const corretor = {
       id: '1',
@@ -34,9 +42,11 @@ export class AuthService {
       permissao: 'corretor',
     };
 
+    // BUSCA O CLIENTE NO BACKEND
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((clientes) => {
-        // Verificar se é o corretor
+
+        // VERIFICAR SE É O CORRETOR
         if (
           credenciais.email === corretor.email &&
           credenciais.senha === corretor.senha
@@ -45,7 +55,7 @@ export class AuthService {
           return corretor;
         }
 
-        // Procurar cliente normal
+        // PROCURAR CLIENTE NORMAL
         const cliente = clientes.find(
           (c) => c.email === credenciais.email && c.senha === credenciais.senha
         );
@@ -60,18 +70,18 @@ export class AuthService {
     );
   }
 
-  // Logout
+  // LOGOUT
   logout(): void {
     localStorage.removeItem(this.CHAVE_AUTH);
     this.router.navigate(['/interna']);
   }
 
-  // Verifica se o cliente está autenticado
+  // VERIFICA SE O CLIENTE ESTÁ AUTENTICADO
   estaAutenticado(): boolean {
     return !!localStorage.getItem(this.CHAVE_AUTH);
   }
 
-  // Retorna o cliente logado
+  // RETORNA O CLIENTE ATUAL
   clienteAtual(): any {
     return JSON.parse(localStorage.getItem(this.CHAVE_AUTH) || 'null');
   }

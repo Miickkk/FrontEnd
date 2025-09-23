@@ -1,22 +1,14 @@
+<!-- interessados.component.html -->
 <app-header-corretor></app-header-corretor>
-
 <section class="listar-interessados">
-  <div class="top-section">
-    <h2 class="titulo-interessados">Interessados nos Imóveis</h2>
-  </div>
-
-  <div class="container-cards">
-    <div *ngFor="let interessado of interessados" class="card">
-      <div class="card-body">
-        <h5 class="card-title">ID: {{ interessado.id }}</h5>
-        <h5 class="card-title">Nome: {{ interessado.nome }}</h5>
-        <p class="card-text">Email: {{ interessado.email }}</p>
-        <p class="card-text">Telefone: {{ interessado.telefone }}</p>
-        <p class="card-text">Mensagem: {{ interessado.mensagem }}</p>
-        <p class="card-text">Código do Imóvel: {{ interessado.imovelId }}</p>
-      </div>
+  <h2>Clientes Interessados</h2>
+  <div class="cards-container">
+    <div class="card" *ngFor="let interesse of interessados">
+      <p><strong>ID Interesse:</strong> {{ interesse.id }}</p>
+      <p><strong>Cliente ID:</strong> {{ interesse.clienteId }}</p>
+      <p><strong>Imóvel ID:</strong> {{ interesse.imovelId }}</p>
+      <button (click)="removerInteressado(interesse.id)">Excluir</button>
     </div>
   </div>
 </section>
-
 <app-footer></app-footer>

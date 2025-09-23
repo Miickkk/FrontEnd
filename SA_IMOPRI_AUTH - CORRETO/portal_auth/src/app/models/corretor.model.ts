@@ -1,3 +1,4 @@
+// MODELO DE DADOS DO CORRETOR
 export class Corretor {
   constructor(
     public id: number,
@@ -7,7 +8,7 @@ export class Corretor {
     public permissao: string // ex: 'corretor'
   ) {}
 
-  // OBJ to JSON
+  // OBJ => JSON
   public toMap(): { [key: string]: any } {
     return {
       id: this.id,
@@ -18,7 +19,7 @@ export class Corretor {
     };
   }
 
-  // JSON to OBJ
+  // JSON => OBJ
   static fromMap(map: any): Corretor {
     return new Corretor(
       map.id,

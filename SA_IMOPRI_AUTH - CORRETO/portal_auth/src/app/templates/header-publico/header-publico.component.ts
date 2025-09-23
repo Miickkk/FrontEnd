@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+// COMPONENTE CABEÇALHO PÚBLICO
 @Component({
   selector: 'app-header-publico',
   templateUrl: './header-publico.component.html',
@@ -12,8 +13,9 @@ export class HeaderPublicoComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  // INICIALIZAÇÃO
   ngOnInit(): void {
-    this.atualizarHeader(this.router.url); // inicial
+    this.atualizarHeader(this.router.url); 
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: Event) => {
@@ -22,8 +24,9 @@ export class HeaderPublicoComponent implements OnInit {
       });
   }
 
+
+  // ATUALIZA O CABEÇALHO
   atualizarHeader(url: string) {
-    // Esconde Home e outros links quando a rota é /interna
     this.esconderHome = url.startsWith('/interna');
   }
 }

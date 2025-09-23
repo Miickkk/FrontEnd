@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <div class="home-container">
   <!-- HERO -->
   <header class="hero">
@@ -7,7 +8,7 @@
   </header>
 
   <!-- DESTAQUES -->
-  <section id="imoveis" class="imoveis-destaque">
+  <section class="imoveis-destaque">
     <h2>Imóveis de Destaque</h2>
     <input type="text" placeholder="Procurar imóvel" class="search-bar" />
 
@@ -15,21 +16,26 @@
       <div class="card" *ngFor="let imovel of imoveis">
         <div class="card-header">
           <h3>{{ imovel.titulo }}</h3>
-          <span
-            class="heart"
-            [class.favorito]="imovel.favorito"
-            (click)="adicionarInteressado(imovel)">
+          <span class="heart" 
+                [class.favorito]="imovel.favorito" 
+                (click)="favoritar(imovel)">
             ♥
           </span>
         </div>
+
         <p>{{ imovel.descricao }}</p>
+        <p *ngIf="imovel.tipo"><strong>Tipo:</strong> {{ imovel.tipo }}</p>
+        <p *ngIf="imovel.cidade"><strong>Cidade:</strong> {{ imovel.cidade }}</p>
+        <p *ngIf="imovel.preco"><strong>Preço:</strong> {{ imovel.preco | currency:'BRL' }}</p>
+
         <button class="btn-secondary">Ver Imóvel</button>
       </div>
     </div>
   </section>
+
   <hr>
 
-  <!-- SERVIÇOS -->
+  <!-- FEATURES -->
   <section class="features">
     <div class="feature">
       <h2>Compra e Venda</h2>
@@ -45,9 +51,6 @@
     </div>
   </section>
 </div>
-
-<br>
-<br>
 
 <app-footer></app-footer>
 <router-outlet></router-outlet>

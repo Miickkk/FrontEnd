@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NotificacaoService } from '../app/services/notificacao.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(private router: Router) {}
 
-  isInternaRoute(): boolean {
-    return this.router.url.startsWith('/interna');
-  }
+// COMPONENTE RAIZ NOTIFICAÇÕES
+export class AppComponent {
+  mensagem$ = this.notificacaoService.mensagem$;
+
+  // SERVIÇO DE NOTIFICAÇÕES
+  constructor(private notificacaoService: NotificacaoService) {}
 }

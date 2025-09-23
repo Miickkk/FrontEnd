@@ -4,6 +4,7 @@ import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+// COMPONENTE CABEÇALHO
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -16,6 +17,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  // INICIALIZAÇÃO
   ngOnInit(): void {
     this.atualizarHeader(this.router.url); // inicial
     this.router.events
@@ -26,6 +28,7 @@ export class HeaderComponent implements OnInit {
       });
   }
 
+  // ATUALIZA O CABEÇALHO
   atualizarHeader(url: string) {
     // Esconde Home e outros links quando a rota é /interna
     this.esconderHome = url.startsWith('/interna');
