@@ -80,15 +80,15 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 ## DIAGRAMA DE FLUXOS
 
 
-## Diagrama de Fluxo – Login e Redirecionamento
+### Diagrama de Fluxo – Login e Redirecionamento
 <img src="diagrama de fluxos - login.png" width="400">
 
 
-## Diagrama de Fluxo – Cliente
+### Diagrama de Fluxo – Cliente
 <img src="diagrama de fluxos - cliente.png" width="400">
 
 
-## Diagrama de Fluxo – Corretor
+### Diagrama de Fluxo – Corretor
 <img src="diagrama de fluxos - corretor.png" width="600">
 
 
