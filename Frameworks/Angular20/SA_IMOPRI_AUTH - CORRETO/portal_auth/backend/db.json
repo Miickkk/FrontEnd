@@ -1,9 +1,15 @@
 {
   "clientes": [
     {
-      "id": 2,
+      "id": 1,
       "nome": "Nick",
       "email": "miickk09@gmail.com",
+      "senha": "1234"
+    },
+    {
+      "id": 2,
+      "nome": "Anick Lima",
+      "email": "anickmurilomeyretuti@gmail.com",
       "senha": "1234"
     }
   ],
