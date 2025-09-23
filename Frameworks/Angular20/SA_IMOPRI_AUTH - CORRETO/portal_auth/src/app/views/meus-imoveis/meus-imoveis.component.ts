@@ -36,7 +36,7 @@ export class MeusImoveisComponent implements OnInit {
         this.meusImoveis = data;
       },
       error: (err) => {
-        console.error('❌ Erro ao carregar imóveis:', err);
+        console.error('Erro ao carregar imóveis:', err);
       }
     });
   }
@@ -51,12 +51,12 @@ export class MeusImoveisComponent implements OnInit {
     if (confirm('Tem certeza que deseja excluir este imóvel?')) {
       this.http.delete(`${this.apiUrl}/${id}`).subscribe({
         next: () => {
-          alert('✅ Imóvel excluído com sucesso!');
+          alert('Imóvel excluído com sucesso!');
           this.carregarImoveis(); // Recarrega a lista
         },
         error: (err) => {
-          console.error('❌ Erro ao excluir imóvel:', err);
-          alert('❌ Erro ao excluir imóvel');
+          console.error('Erro ao excluir imóvel:', err);
+          alert('Erro ao excluir imóvel');
         }
       });
     }

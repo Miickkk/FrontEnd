@@ -47,7 +47,7 @@ createInteresse(interesse: Interessado): Observable<Interessado> {
 
       // CALCULA O PRÓXIMO ID
       const maxId = interesses.length ? Math.max(...interesses.map(i => Number(i.id))) : 0;
-      interesse.id = (maxId + 1).toString(); // ✅ atribui ao objeto a ser enviado, como string
+      interesse.id = (maxId + 1).toString(); 
 
       // FAZ O POST
       return this.http.post<Interessado>(`${this.apiUrl}/interesses`, interesse);

@@ -38,7 +38,7 @@ export class ImoveisInteressadosComponent implements OnInit {
           this.imoveisFavoritos = imoveis.filter(i => i)
         );
       },
-      error: () => this.notificacaoService.mostrar('❌ Erro ao buscar favoritos.')
+      error: () => this.notificacaoService.mostrar('Erro ao buscar favoritos.')
     });
   }
 }

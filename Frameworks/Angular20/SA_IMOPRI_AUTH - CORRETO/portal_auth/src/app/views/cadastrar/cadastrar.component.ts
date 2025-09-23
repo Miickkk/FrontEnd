@@ -62,7 +62,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrarImovel() {
     if (!this.imovelForm.valid) {
-      alert('⚠️ Preencha todos os campos obrigatórios.');
+      alert('Preencha todos os campos obrigatórios.');
       return;
     }
 
@@ -72,24 +72,24 @@ export class CadastrarComponent implements OnInit {
       // Atualiza imóvel existente
       this.http.put(`${this.apiUrl}/${this.imovelId}`, imovelDados).subscribe({
         next: () => {
-          alert('✅ Imóvel atualizado com sucesso!');
+          alert('Imóvel atualizado com sucesso!');
           this.router.navigate(['/meus-imoveis']);
         },
         error: (err) => {
-          console.error('❌ Erro ao atualizar imóvel:', err);
-          alert('❌ Erro ao atualizar imóvel');
+          console.error('Erro ao atualizar imóvel:', err);
+          alert('Erro ao atualizar imóvel');
         }
       });
     } else {
       // Cadastra novo imóvel
       this.http.post(this.apiUrl, imovelDados).subscribe({
         next: () => {
-          alert('✅ Imóvel cadastrado com sucesso!');
+          alert('Imóvel cadastrado com sucesso!');
           this.router.navigate(['/meus-imoveis']);
         },
         error: (err) => {
-          console.error('❌ Erro ao cadastrar imóvel:', err);
-          alert('❌ Erro ao cadastrar imóvel');
+          console.error('Erro ao cadastrar imóvel:', err);
+          alert('Erro ao cadastrar imóvel');
         }
       });
     }

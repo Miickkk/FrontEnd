@@ -32,7 +32,7 @@ export class InteressadosComponent implements OnInit {
   listarInteressados() {
     this.interessadosService.getInteressadosByCorretor(this.corretorId).subscribe({
       next: res => this.interessados = res,
-      error: () => this.notificacaoService.mostrar('❌ Erro ao carregar interessados.')
+      error: () => this.notificacaoService.mostrar('Erro ao carregar interessados.')
     });
   }
 
@@ -43,11 +43,11 @@ removerInteressado(id: number) {
     next: () => {
       // Atualiza o array local filtrando pelo id
       this.interessados = this.interessados.filter(i => i.id === undefined ? false : i.id !== id);
-      this.notificacaoService.mostrar('✅ Interessado removido com sucesso!');
+      this.notificacaoService.mostrar('Interessado removido com sucesso!');
     },
     error: (err) => {
       console.error('Erro ao remover interessado:', err);
-      this.notificacaoService.mostrar('❌ Erro ao remover interessado.');
+      this.notificacaoService.mostrar('Erro ao remover interessado.');
     }
   });
 }

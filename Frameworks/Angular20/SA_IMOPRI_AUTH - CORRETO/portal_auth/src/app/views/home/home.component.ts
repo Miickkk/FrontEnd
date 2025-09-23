@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
           }
         });
       },
-      error: () => this.notificacaoService.mostrar('❌ Erro ao carregar imóveis.')
+      error: () => this.notificacaoService.mostrar('Erro ao carregar imóveis.')
     });
   }
 
@@ -62,9 +62,9 @@ favoritar(imovel: Imovel) {
   this.interessadosService.createInteresse(interesse).subscribe({
     next: () => {
       imovel.favorito = true;
-      this.notificacaoService.mostrar('✅ Imóvel favoritado com sucesso!');
+      this.notificacaoService.mostrar('Imóvel favoritado com sucesso!');
     },
-    error: () => this.notificacaoService.mostrar('❌ Erro ao favoritar o imóvel.')
+    error: () => this.notificacaoService.mostrar('Erro ao favoritar o imóvel.')
   });
 }
 }

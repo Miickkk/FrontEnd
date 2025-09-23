@@ -1,15 +1,8 @@
 {
   "clientes": [
     {
-      "id": "1",
-      "nome": "Mike",
-      "email": "corretor@prime.com",
-      "senha": "123",
-      "tipo": "corretor"
-    },
-    {
       "id": 2,
-      "nome": "Mick",
+      "nome": "Nick",
       "email": "miickk09@gmail.com",
       "senha": "1234"
     }
@@ -36,12 +29,12 @@
     {
       "id": "1",
       "clienteId": 2,
-      "imovelId": 2
+      "imovelId": 1
     },
     {
       "id": "2",
       "clienteId": 2,
-      "imovelId": 1
+      "imovelId": 2
     }
   ]
 }
