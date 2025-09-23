@@ -8,13 +8,12 @@
       "tipo": "corretor"
     },
     {
-      "id": "2",
-      "nome": "Nick",
-      "email": "anickmurilomeyretuti@gmail.com",
-      "senha": "Miickk09"
+      "id": 2,
+      "nome": "Mick",
+      "email": "miickk09@gmail.com",
+      "senha": "1234"
     }
   ],
-
   "imoveis": [
     {
       "id": "1",
@@ -33,7 +32,6 @@
       "valor": 8200
     }
   ],
-
   "interesses": [
     {
       "id": "1",
