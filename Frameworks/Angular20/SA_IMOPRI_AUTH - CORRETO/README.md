@@ -93,6 +93,10 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 ## DIAGRAMA DE CLASSES
 <img src="diagrama de classes.png" width="400">
 
+## VIDEO DO FUNCIONAMENTO
+- ### <video src="/IMOBILIARIA PRIME.mp4"></video>
+
+
 
 ## LINK DO FIGMA
 - ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
