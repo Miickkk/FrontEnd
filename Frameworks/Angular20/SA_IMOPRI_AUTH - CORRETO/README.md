@@ -76,7 +76,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 
-## DIAGRAMA DE FLUXOS
+## Diagramas de fluxo
 
 - ### Diagrama de Fluxo – Login e Redirecionamento
 ```mermaid
@@ -122,7 +122,7 @@ flowchart TD
     G --> B
 ```
 
-## DIAGRAMA DE CASOS DE USO
+## Diagramas de caso de uso
 ```mermaid
 graph TB
     subgraph "Imobiliária Prime"
@@ -162,7 +162,7 @@ graph TB
     publico --> uc11
 ```
 
-## DIAGRAMA DE CLASSES
+## Diagrama de classes
 ```mermaid
 classDiagram
     class Usuario {
@@ -207,10 +207,10 @@ classDiagram
     Imovel "1" --> "many" Interesse
 ```
 
-## VIDEO DO FUNCIONAMENTO
+## Video do funcionamento
 - ### <video src="/IMOBILIARIA PRIME.mp4"></video>
 
-## LINK DO FIGMA
+## Prototipagem
 - ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
 
 
