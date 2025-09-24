@@ -79,24 +79,122 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 ## DIAGRAMA DE FLUXOS
 
 ### Diagrama de Fluxo – Login e Redirecionamento
-<img src="diagrama de fluxos - login.png" width="400">
+```mermaid
+flowchart TD
+    A[Início] --> B[Tela de Login]
+    B --> C{Credenciais válidas?}
+    C -- Não --> D[Mensagem de erro]
+    D --> B
+    C -- Sim --> E{Tipo de usuário}
+    E -- Corretor --> F[Redirecionar para Dashboard de Imóveis]
+    E -- Cliente --> G[Redirecionar para Página Inicial / Meus Interesses]
+    F --> H[Fim]
+    G --> H
+```
 
 ### Diagrama de Fluxo – Cliente
-<img src="diagrama de fluxos - cliente.png" width="400">
+```mermaid
+flowchart TD
+    A[Cliente Logado] --> B[Buscar Imóvel]
+    B --> C[Visualizar Detalhes]
+    C --> D{Tenho Interesse?}
+    D -- Sim --> E[Registrar Interesse no Imóvel]
+    E --> F[Listar Meus Interesses]
+    F --> G[Fim]
+    D -- Não --> H[Voltar à Busca]
+    H --> B
+```
 
 ### Diagrama de Fluxo – Corretor
-<img src="diagrama de fluxos - corretor.png" width="600">
+```mermaid
+flowchart TD
+    A[Login Corretor] --> B[Dashboard]
+    B --> C{Ação desejada}
+    
+    C -- Criar --> D[Cadastrar Novo Imóvel]
+    C -- Editar --> E[Atualizar Imóvel Existente]
+    C -- Excluir --> F[Remover Imóvel]
+    C -- Visualizar --> G[Lista de Clientes Interessados]
+    
+    D --> B
+    E --> B
+    F --> B
+    G --> B
+```
 
 ## DIAGRAMA DE CASOS DE USO
-<img src="diagrama de casos de uso.png" width="400">
+```mermaid
+usecaseDiagram
+  rectangle "Imobiliária Prime" {
+    
+    actor Cliente
+    actor Corretor
+    actor Publico
+
+    Cliente --> (Listar imóveis de interesse)
+    Cliente --> (Editar perfil)
+    Cliente --> (Marcar interesse em imóvel)
+    Cliente --> (Login)
+
+    Corretor --> (Login)
+    Corretor --> (Editar imóvel)
+    Corretor --> (Excluir imóvel)
+    Corretor --> (Listar clientes interessados)
+    Corretor --> (Cadastrar imóvel)
+
+    Publico --> (Visualizar imóveis em destaque)
+    Publico --> (Ver detalhes de imóvel)
+    Publico --> (Criar conta de cliente)
+  }
+```
 
 ## DIAGRAMA DE CLASSES
-<img src="diagrama de classes.png" width="400">
+```mermaid
+classDiagram
+    class Usuario {
+        +id: number
+        +nome: string
+        +email: string
+        +senha: string
+        +tipo: string
+    }
+
+    class Corretor {
+        +gerenciarImoveis()
+        +visualizarInteressados()
+    }
+
+    class Cliente {
+        +listarInteresses()
+        +editarPerfil()
+    }
+
+    class Imovel {
+        +id: number
+        +titulo: string
+        +tipo: string
+        +cidade: string
+        +preco: number
+        +descricao: string
+        +imagemUrl: string
+    }
+
+    class Interesse {
+        +id: number
+        +clienteId: number
+        +imovelId: number
+    }
+
+    Usuario <|-- Corretor
+    Usuario <|-- Cliente
+
+    Corretor "1" --> "many" Imovel
+    Cliente "1" --> "many" Interesse
+    Imovel "1" --> "many" Interesse
+```
 
 ## VIDEO DO FUNCIONAMENTO
 - ### <video src="/IMOBILIARIA PRIME.mp4"></video>
-
-
 
 ## LINK DO FIGMA
 - ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
