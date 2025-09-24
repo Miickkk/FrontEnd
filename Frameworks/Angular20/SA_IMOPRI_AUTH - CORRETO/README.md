@@ -78,7 +78,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 ## DIAGRAMA DE FLUXOS
 
-### Diagrama de Fluxo – Login e Redirecionamento
+- ### Diagrama de Fluxo – Login e Redirecionamento
 ```mermaid
 flowchart TD
     A[Início] --> B[Tela de Login]
@@ -92,7 +92,7 @@ flowchart TD
     G --> H
 ```
 
-### Diagrama de Fluxo – Cliente
+- ### Diagrama de Fluxo – Cliente
 ```mermaid
 flowchart TD
     A[Cliente Logado] --> B[Buscar Imóvel]
@@ -105,7 +105,7 @@ flowchart TD
     H --> B
 ```
 
-### Diagrama de Fluxo – Corretor
+- ### Diagrama de Fluxo – Corretor
 ```mermaid
 flowchart TD
     A[Login Corretor] --> B[Dashboard]
