@@ -124,28 +124,42 @@ flowchart TD
 
 ## DIAGRAMA DE CASOS DE USO
 ```mermaid
-usecaseDiagram
-  rectangle "Imobiliária Prime" {
-    
-    actor Cliente
-    actor Corretor
-    actor Publico
+graph TB
+    subgraph "Imobiliária Prime"
+        uc1([Listar imóveis de interesse])
+        uc2([Editar perfil])
+        uc3([Marcar interesse em imóvel])
+        uc4([Login])
+        uc5([Editar imóvel])
+        uc6([Excluir imóvel])
+        uc7([Listar clientes interessados])
+        uc8([Cadastrar imóvel])
+        uc9([Visualizar imóveis em destaque])
+        uc10([Ver detalhes de imóvel])
+        uc11([Criar conta de cliente])
+    end
 
-    Cliente --> (Listar imóveis de interesse)
-    Cliente --> (Editar perfil)
-    Cliente --> (Marcar interesse em imóvel)
-    Cliente --> (Login)
+    cliente([Cliente])
+    corretor([Corretor])
+    publico([Público])
 
-    Corretor --> (Login)
-    Corretor --> (Editar imóvel)
-    Corretor --> (Excluir imóvel)
-    Corretor --> (Listar clientes interessados)
-    Corretor --> (Cadastrar imóvel)
+    %% Cliente
+    cliente --> uc1
+    cliente --> uc2
+    cliente --> uc3
+    cliente --> uc4
 
-    Publico --> (Visualizar imóveis em destaque)
-    Publico --> (Ver detalhes de imóvel)
-    Publico --> (Criar conta de cliente)
-  }
+    %% Corretor
+    corretor --> uc4
+    corretor --> uc5
+    corretor --> uc6
+    corretor --> uc7
+    corretor --> uc8
+
+    %% Público
+    publico --> uc9
+    publico --> uc10
+    publico --> uc11
 ```
 
 ## DIAGRAMA DE CLASSES
