@@ -1,6 +1,5 @@
 # LEVANTAMENTO DE REQUISITOS 
 
-
 ## Objetivos SMART
 Desenvolver metas claras para o fluxo do projeto.
 
@@ -79,25 +78,24 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 ## DIAGRAMA DE FLUXOS
 
-
 ### Diagrama de Fluxo – Login e Redirecionamento
 <img src="diagrama de fluxos - login.png" width="400">
 
 ### Diagrama de Fluxo – Cliente
 <img src="diagrama de fluxos - cliente.png" width="400">
 
-
 ### Diagrama de Fluxo – Corretor
 <img src="diagrama de fluxos - corretor.png" width="600">
-
-
 
 ## DIAGRAMA DE CASOS DE USO
 <img src="diagrama de casos de uso.png" width="400">
 
-
 ## DIAGRAMA DE CLASSES
 <img src="diagrama de classes.png" width="400">
+
+
+## LINK DO FIGMA
+- ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
 
 
 PODE MEXER ❤︎ cavalinho ❤︎

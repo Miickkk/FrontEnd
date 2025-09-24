@@ -23,7 +23,26 @@
       "cidade": "São Paulo",
       "descricao": "Residência arejada com 3 quartos, área verde e churrasqueira.",
       "valor": 8200
+    },
+    {
+      "id": "3",
+      "titulo": "Penthouse Luxuosa com Vista para o Mar",
+      "categoria": "Apartamento",
+      "cidade": "Balneário Camboriú",
+      "descricao": "4 suítes, rooftop com piscina, lounge gourmet e sauna privativa.",
+      "valor": 14200000
     }
   ],
-  "interesses": []
+  "interesses": [
+    {
+      "id": "1",
+      "clienteId": 2,
+      "imovelId": 2
+    },
+    {
+      "id": "2",
+      "clienteId": 2,
+      "imovelId": 3
+    }
+  ]
 }
