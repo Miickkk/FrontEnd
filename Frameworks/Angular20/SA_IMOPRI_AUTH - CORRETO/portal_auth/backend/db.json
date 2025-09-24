@@ -1,6 +1,11 @@
 {
   "clientes": [
-    
+    {
+      "id": 1,
+      "nome": "Nick",
+      "email": "anickmurilomeyretuti@gmail.com",
+      "senha": "1234"
+    }
   ],
   "imoveis": [
     {
@@ -26,9 +31,31 @@
       "cidade": "Balneário Camboriú",
       "descricao": "4 suítes, rooftop com piscina, lounge gourmet e sauna privativa.",
       "valor": 14200000
+    },
+    {
+      "id": "4",
+      "titulo": "Kitnet Studio em Condomínio de Luxo",
+      "categoria": "KitNet",
+      "cidade": "Belo Horizonte",
+      "descricao": "Studio moderno com área de lazer compartilhada, piscina e academia.",
+      "valor": 520000
     }
   ],
   "interesses": [
-    
+    {
+      "id": "1",
+      "clienteId": 2,
+      "imovelId": 1
+    },
+    {
+      "id": "3",
+      "clienteId": 2,
+      "imovelId": 2
+    },
+    {
+      "id": "4",
+      "clienteId": 2,
+      "imovelId": 4
+    }
   ]
 }
