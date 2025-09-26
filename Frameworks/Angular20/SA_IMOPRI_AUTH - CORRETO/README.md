@@ -210,20 +210,3 @@ classDiagram
 ## Prototipagem
 - ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
 
-
-PODE MEXER ❤︎ cavalinho ❤︎
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **auth.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **interessados.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **meus-imoveis.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **VIEWS**, depois dentro da pasta **INTERNA** -> arquivo **interna.component.html** -> linha **10, 25, 33, 41,** -> pode mudar a imagem, que dentro da pasta **ASSETS**, tem outra pasta de imagens, pode trocar se quiser!
-
-PORT ENQUANTO SÓ ISSO!
-
-para: ❤︎ cavalinho ❤︎
