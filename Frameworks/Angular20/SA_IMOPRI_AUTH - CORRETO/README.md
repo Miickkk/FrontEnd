@@ -76,7 +76,7 @@ Ferramentas e tecnologias utilizadas para desenvolvimento rápido e eficiente:
 
 
 
-## Diagramas de fluxo
+## Diagramas de fluxo (MERMAID)
 
 - ### Diagrama de Fluxo – Login e Redirecionamento
 ```mermaid
@@ -122,7 +122,7 @@ flowchart TD
     G --> B
 ```
 
-## Diagramas de caso de uso
+## Diagramas de caso de uso (MERMAID)
 ```mermaid
 graph TB
     subgraph "Imobiliária Prime"
@@ -162,7 +162,7 @@ graph TB
     publico --> uc11
 ```
 
-## Diagrama de classes
+## Diagrama de classes (MERMAID)
 ```mermaid
 classDiagram
     class Usuario {
@@ -207,26 +207,6 @@ classDiagram
     Imovel "1" --> "many" Interesse
 ```
 
-## Video do funcionamento
-- ### <video src="/imobiliaria_primer.mp4"></video>
-
-## Prototipagem
+## Prototipagem (FIGMA)
 - ### https://www.figma.com/design/vuGinsihBv6BUXEzxbS1kL/Sem-t%C3%ADtulo--Copy-?node-id=0-1&m=dev&t=VT91QUTEmgyuhdZn-1
 
-
-PODE MEXER ❤︎ cavalinho ❤︎
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **auth.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **interessados.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **SERVICES** -> arquivo **meus-imoveis.service.ts** -> linha **10** -> pode mudar o 3004 para o numero que quiser, **apenas o numero!**
-
-
--dentro da pasta **SRC**, depois dentro da pasta **APP**, depois dentro da pasta **VIEWS**, depois dentro da pasta **INTERNA** -> arquivo **interna.component.html** -> linha **10, 25, 33, 41,** -> pode mudar a imagem, que dentro da pasta **ASSETS**, tem outra pasta de imagens, pode trocar se quiser!
-
-PORT ENQUANTO SÓ ISSO!
-
-para: ❤︎ cavalinho ❤︎
