@@ -19,60 +19,67 @@ O projeto consiste no desenvolvimento de um Sistema de Gestão de Manutenção (
 ## Diagramas (Mermaid, Miro, Draw.io)
 
 1. ### Diagrama de Classes
+
 Este Diagrama modela as principais entidades do sistema:
 - Usuários (User/Usuarios);
+    - atributos: id, nome, email, senha, função
+    - métodos: create, read, update, delete, login, logout
 - Máquinas/Equipamentos (Equipment);
+    - atributos: id, modelo, marca, numSerie, status, localizacao
+    - métodos: create, read, update, delete
 - Ordem de Serviço(Service);
+    - atributos: id, titulo, descricao, idEquipamento, idTecnico, tipoManutencao
+    - métodos: create, read, update, delete
 
 ```mermaid
 
 classDiagram
-
-    class Usuario{
-        +String id
-        +String nome
-        +String email
-        +String senha
-        +String funcao
+    class Usuario {
+        +int id
+        +string nome
+        +string email
+        +string senha
+        +string funcao
+        +create()
+        +read()
+        +update()
+        +delete()
         +login()
         +logout()
+    }
+
+    class Equipamento {
+        +int id
+        +string modelo
+        +string marca
+        +string numSerie
+        +string status
+        +string localizacao
         +create()
         +read()
         +update()
         +delete()
     }
 
-    class Equipamento{
-        +String id
-        +String nome
-        +String modelo
-        +String numeroSerie
-        +String localizacao
-        +String status
-        +create()
-        +read()
-        +update()
-        +delete()
-    }
-
-    class OrdemServico{
-        +String id
+    class OrdemDeServico {
+        +int id
         +string titulo
-        +String descricao
-        +String tipoManutencao
-        +String status
-        +String idTecnico
-        +String IdEquipamento
+        +string descricao
+        +int idEquipamento
+        +int idTecnico
+        +string tipoManutencao
         +create()
         +read()
         +update()
         +delete()
     }
 
-    Usuario "1" -- "1+" OrdemServico : "é resposável por"
-    Equipamento "1" -- "1+" OrdemServico : "associado a"
+    Usuario "1" -- "0..*" OrdemDeServico : "responsável por"
+    Equipamento "1" -- "0..*" OrdemDeServico : "associado a"
 
 ```
+
+
  #### Explicação do Diagrama de Classe
  - Um Usuário (Técnico) por ser responsável por várias Ordens de Servico
  - Um Equipamento por estar associado a várias Ordens de Serviço
@@ -189,6 +196,9 @@ A tabela abaixo apresenta os riscos identificados no projeto **SGM**, organizado
 
 ---
 
-### FIGMA:
-
+## Prototipagem
 https://www.figma.com/design/yDT32aqiRCmwaygYGpI50g/Untitled?node-id=0-1&m=dev&t=y2DREqwnyINc9fzG-1
+
+---
+
+## Codificação 
